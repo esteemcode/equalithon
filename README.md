@@ -2,7 +2,7 @@
 Essteem Equalithon
 
 # prerequisites 
-npm installed on your machine 
+npm installed on your machine &nbsp  
 react js library installed
 
 # Create Github account, get code into your local workspace (you have to fork it if you want to contribute to this project)
@@ -18,9 +18,9 @@ react js library installed
     > upstream  https://github.com/esteemcode/equalithon.git (fetch)
     > upstream  https://github.com/esteemcode/equalithon.git (push)
 * For more information, please read the reference links below:
-https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189
-https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo#keep-your-fork-synced
-https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork
+https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189 &nbsp  
+https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo#keep-your-fork-synced &nbsp  
+https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork &nbsp  
 
 # Run the code
 * In your terminal first install npm dependencies by running the command `npm install`
