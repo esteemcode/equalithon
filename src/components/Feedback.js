@@ -93,6 +93,7 @@ const Feedback = () => {
                                     teamsData.map((team, index) => {
                                         return (
                                             <option
+                                                key={index}
                                                 value={team.id}
                                             >{`Team ${team.id}`}
                                             </option>
