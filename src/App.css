@@ -6,3 +6,8 @@ h1 {
   width: 500px;
   margin: auto;
 }
+
+
+.radio-button__hidden input {
+  opacity: 0;
+}
