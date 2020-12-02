@@ -15,8 +15,21 @@ const Section10 = () => {
                 <p>Sign up with your email address to receive news and updates.</p>
                 </Col>
             </Row>
-            <Row>
+            <Row id="subscribe">
                 <Col>
+                    <Form>
+                        <Row className="align-items-center">
+                            <Col>
+                                <Form.Control size="lg" placeholder="First name" />
+                            </Col>
+                            <Col>
+                                <Form.Control size="lg" placeholder="Last name" />
+                            </Col>
+                            <Col>
+                                <Form.Control size="lg" placeholder="Email" />
+                            </Col>
+                        </Row>
+                    </Form>
                 </Col>
             </Row>
             <Row>

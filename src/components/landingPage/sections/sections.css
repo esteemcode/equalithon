@@ -86,25 +86,12 @@
     margin-bottom: 45px;
 }
 
+#subscribe {
+    margin: 0% 10% 2% 10%;
+}
+
 #footer {
     background-color: #38383B;
     margin: 0px -30px;
     height: 40%;
-}
-
-#covid {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./section8/covid-fake-news.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-#covid-header {
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* transform: translate(-50%, -50%); */
-    color: white;
 }
