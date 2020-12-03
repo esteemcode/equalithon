@@ -1,42 +1,45 @@
 import React from 'react';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SignIn = () => {
 
     return (
-        <div>
-            <h3>SIGN UP</h3>
-        <form>       
-            <table>
-                <tr>
-                    <td>First name</td>
-                    <td><input type="text" placeholder= "First name" name=""/></td>
-                </tr>
-                <tr>
-                    <td>Last name</td>
-                    <td><input type="text" placeholder= "Last name" name=""/></td>
-                </tr>
-                <tr>
-                    <td>Email address</td>
-                    <td><input type="mail" placeholder= "Email" name=""/></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" placeholder= "Password" name=""/></td>
-                </tr>
-                <tr>
-                    <td>Confirm password</td>
-                    <td><input type="password" placeholder= "Confirm password" name=""/></td>
-                </tr><br/>
-            </table>
-        
-                <p>Already signed up? <input type="submit" value="Login"/></p><br/>
+    <div>    
+        <h2>SIGN UP</h2>
+    <Form className="SignIn">
+        <Form.Group>
+            <Form.Label for="firstName">First Name</Form.Label>
+            <Form.Control type="text" id="firstName" placeholder="first name" />
+        </Form.Group>
 
-                <a href="#" class="google btn"><i class="fa fa-google fa-fw"></i> Login with Google+ </a><br/>
-                <a href="">Forgot Password?</a>
-         </form>
-         </div>
-        
-    )
+        <Form.Group>
+            <Form.Label for="lastName">Last Name</Form.Label>
+            <Form.Control type="text" id="lastName" placeholder="last name" />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="email address" />
+        </Form.Group>
+
+        <Form.Group controlId="password">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="password" />
+        </Form.Group>
+
+        <Form.Group controlId="confirmPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="confirmPassword" placeholder="Confirm password" />
+        </Form.Group>
+
+        <Form.Text className="text-muted">Already signed up?</Form.Text>
+
+        <Button type="submit" variant="primary">Login</Button>
+    </Form>
+    </div>
+)
 }
 
 export default SignIn;
