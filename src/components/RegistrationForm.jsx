@@ -17,7 +17,7 @@ const RegistrationForm = () => {
                 <Form.Control type="text" id="lastName" placeholder="Enter your Last Name" />
             </Form.Group>
 
-            <Form.Group controlId="formBasicEmail">
+            <Form.Group controlId="email">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter your email" />
                 <Form.Text className="text-muted">
