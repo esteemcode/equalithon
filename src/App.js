@@ -6,6 +6,7 @@ import SignIn from './components/SignIn';
 import ContactUs from './components/ContactUs';
 import Feedback from './components/Feedback';
 import './App.css';
+import RegistrationGroup from './components/RegistrationGroup';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/signin" exact component={SignIn} />
         <Route path="/contact" exact component={ContactUs} />
         <Route path="/feedback" exact component={Feedback} />
+        <Route path="/group-registration" exact component={RegistrationGroup} />
+       
       </Router>
     </div>
   );
