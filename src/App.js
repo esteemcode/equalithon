@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/" exact component={Home} />
-        <Route path="/registration" exact component={RegistrationForm} />
+        <Route path="/" exact component={RegistrationForm} />
+        <Route path="/home" exact component={Home} />
         <Route path="/signin" exact component={SignIn} />
         <Route path="/contact" exact component={ContactUs} />
         <Route path="/feedback" exact component={Feedback} />
