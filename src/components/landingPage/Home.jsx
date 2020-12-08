@@ -22,14 +22,14 @@ const Home = () => {
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col lg={{ span: 6, offset: 3 }}>
-                        <Button className="home-button yellow" size="lg">
+                        <Button className="home-button yellow" variant="warning" size="lg">
                             Team Area
                         </Button>{' '}
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col lg={{ span: 6, offset: 3 }}>
-                        <Button className="home-button dark-gray" size="lg">
+                        <Button className="home-button dark-gray" variant="dark" size="lg">
                             Go to Slack
                         </Button>{' '}
                     </Col>
