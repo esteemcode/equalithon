@@ -1,8 +1,12 @@
-h1 {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
+
 .registrationForm {
   padding-top: 20px;
-  width: 500px;
+  width: 40%;
   margin: auto;
 }

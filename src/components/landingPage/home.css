@@ -1,0 +1,52 @@
+#navbar {
+    background-color: #F3F3F3;
+}
+
+#button-container {
+    margin-top: 5%;
+}
+
+.home-button {
+    width: 50%;
+    border: none;
+    margin: 1px;
+}
+.form-header {
+    width:100%;
+}
+
+.cyan {
+    background-color: #29CABE;
+}
+
+.yellow {
+    background-color: #FFD966;
+}
+
+.dark-gray {
+    background-color: #434343;
+}
+
+.form-group {
+    margin-bottom: .4rem;
+}
+
+.form-label {
+    margin: 20px 0 0 20px;
+    font-size: 14px;
+}
+
+.signup-button {
+    width: 60%;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40%;
+    margin-top: 15px;
+}
+
+#footer {
+    background-color: #38383B;
+    margin: 0px -30px;
+    height: 40%;
+}
