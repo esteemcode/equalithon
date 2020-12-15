@@ -49,7 +49,7 @@ const RegistrationForm = props => {
                     <Form.Control required type="password" minLength="6" maxLength="8" size="8" placeholder="Confirm password" name="confirmPassword" onChange={onChangeHandler} />
                 </Form.Group>
                 {formState.password !== formState.confirmPassword ? (
-                    <span className="text-danger small">Password don't match.</span>
+                    <span className="text-danger small">Passwords don't match.</span>
                 ) : null}
                 <Row>
                     <Col>
