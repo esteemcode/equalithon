@@ -12,7 +12,6 @@ const Navigation = () => {
                 <Image
                     src={logo}
                     width="150px"
-                    
                     alt="Essteem logo"
                 ></Image>
             </Navbar.Brand>            

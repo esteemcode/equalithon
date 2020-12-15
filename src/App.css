@@ -10,3 +10,11 @@ body {
   width: 40%;
   margin: auto;
 }
+
+.cyan {
+  background-color: #29CABE;
+}
+
+.yellow {
+  background-color: #FFD966;
+}
