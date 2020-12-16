@@ -56,7 +56,7 @@ const RegistrationForm = props => {
                         <Form.Label className="text-secondary form-label">Already signed up? <a className="text-secondary" href='/login'>Log in</a></Form.Label>
                     </Col>
                     <Col >
-                        <Button href="" variant="warning" className="yellow text-dark signup-button" type="submit">SIGN UP</Button>
+                        <Button href="/home" variant="warning" className="yellow text-dark signup-button" type="submit">SIGN UP</Button>
                     </Col>
                 </Row>
             </Form>
