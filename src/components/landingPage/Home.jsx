@@ -13,21 +13,21 @@ const Home = () => {
         <>
             <Navigation />
             <Container id="button-container" fluid>
-                <Row className="justify-content-md-center">
+                <Row className="text-center">
                     <Col lg={{ span: 6, offset: 3 }}>
                         <Button className="home-button cyan" variant="info" size="lg">
                             Equalithon ＆ Team Selection
                         </Button>{' '}
                     </Col>
                 </Row>
-                <Row className="justify-content-md-center">
+                <Row className="text-center">
                     <Col lg={{ span: 6, offset: 3 }}>
                         <Button className="home-button yellow" variant="warning" size="lg">
                             Team Area
                         </Button>{' '}
                     </Col>
                 </Row>
-                <Row className="justify-content-md-center">
+                <Row className="text-center">
                     <Col lg={{ span: 6, offset: 3 }}>
                         <Button className="home-button dark-gray" variant="dark" size="lg">
                             Go to Slack
