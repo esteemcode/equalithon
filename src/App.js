@@ -10,17 +10,18 @@ import RegistrationGroup from './components/RegistrationGroup';
 import DAndIRegistration from './components/DAndIRegistration';
 import SponsorHome from './components/SponsorHome';
 import Sponsorship from './components/Sponsorship';
+import RegistrationEndNavigation from './components/RegistrationEndNavigation';
 import EqualithonSelection from './components/EqualithonSelection';
 import SelectLocation from './components/SelectLocation';
 import JobInfo from './components/JobInfo';
 import EqualithonInfo from './components/EqualithonInfo';
-import RegistrationEndNavigation from './components/RegistrationEndNavigation';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Route path="/" exact component={RegistrationForm} />
+        <Route path="/registrationendnavigation" exact component={RegistrationEndNavigation} />
         <Route path="/home" exact component={Home} />
         <Route path="/signin" exact component={SignIn} />
         <Route path="/equalithon-selection" exact component={EqualithonSelection} />
