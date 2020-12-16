@@ -14,6 +14,7 @@ import EqualithonSelection from './components/EqualithonSelection';
 import SelectLocation from './components/SelectLocation';
 import JobInfo from './components/JobInfo';
 import EqualithonInfo from './components/EqualithonInfo';
+import RegistrationEndNavigation from './components/RegistrationEndNavigation';
 
 function App() {
   return (
