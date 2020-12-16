@@ -30,7 +30,23 @@ const EqualithonSelection = () => {
                 <Form.Group name="teamDescription">
                     <Form.Control as="textarea" rows={3} placeholder="Gender Equalithon team description here..." />
                 </Form.Group>
-                <Row className="text-center">
+                <Form.Group className="form-group">
+                    <Form.Control className="mt-3" required type="text" name="teamName" placeholder="BLM Equalithon" />
+                </Form.Group>
+                <Form.Group className="form-group">
+                    <Form.Control required type="date" name="date" value="2020-12-15"
+                    min="2020-01-01" max="2021-12-31" />
+                </Form.Group>
+                <Form.Group className="form-group">
+                    <Form.Control required type="text" name="nonProfit" placeholder="Nonprofit Supported" />
+                </Form.Group>
+                <Form.Group className="form-group">
+                    <Form.Control required type="text" name="sponsor" placeholder="Sponsor A/B/C" />
+                </Form.Group>
+                <Form.Group name="teamDescription">
+                    <Form.Control as="textarea" rows={3} placeholder="BLM Equalithon team description here..." />
+                </Form.Group>
+                <Row className="text-center mt-3">
                     <Col lg={{ span: 6}}>
                         <Button href="/equalithon-info" size="lg" variant="info" className="cyan text-white team-select-button mx-auto">Learn More</Button>
                     </Col>
