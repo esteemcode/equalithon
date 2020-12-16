@@ -15,7 +15,7 @@ const Home = () => {
             <Container id="button-container" fluid>
                 <Row className="text-center">
                     <Col lg={{ span: 6, offset: 3 }}>
-                        <Button className="home-button cyan" variant="info" size="lg">
+                        <Button href="/equalithon-selection" className="home-button cyan" variant="info" size="lg">
                             Equalithon ＆ Team Selection
                         </Button>{' '}
                     </Col>
@@ -29,7 +29,7 @@ const Home = () => {
                 </Row>
                 <Row className="text-center">
                     <Col lg={{ span: 6, offset: 3 }}>
-                        <Button className="home-button dark-gray" variant="dark" size="lg">
+                        <Button href="/home" className="home-button dark-gray" variant="dark" size="lg">
                             Go to Slack
                         </Button>{' '}
                     </Col>

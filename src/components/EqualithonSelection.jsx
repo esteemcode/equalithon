@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const TeamSelection = () => {
+const EqualithonSelection = () => {
     
     return (
         <>
@@ -32,10 +32,10 @@ const TeamSelection = () => {
                 </Form.Group>
                 <Row className="text-center">
                     <Col lg={{ span: 6}}>
-                        <Button href="" size="lg" variant="info" className="cyan text-white team-select-button mx-auto">Learn More</Button>
+                        <Button href="/equalithon-info" size="lg" variant="info" className="cyan text-white team-select-button mx-auto">Learn More</Button>
                     </Col>
                     <Col lg={{ span: 6}}>
-                        <Button href="/team-select-location" size="lg" variant="warning" className="yellow text-dark team-select-button mx-auto">Participate</Button>
+                        <Button href="/select-location" size="lg" variant="warning" className="yellow text-dark team-select-button mx-auto">Participate</Button>
                     </Col>
                 </Row>
             </Form>
@@ -43,4 +43,4 @@ const TeamSelection = () => {
     )
 }
 
-export default TeamSelection;
+export default EqualithonSelection;
