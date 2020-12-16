@@ -43,3 +43,23 @@ body {
 .yellow {
   background-color: #FFD966;
 }
+
+.home-button {
+  width: 65%;
+}
+
+.home {
+  width: 90px;
+  margin-top: 2%;
+  position: absolute;
+  margin-left: 20%;
+}
+
+.team-select-button {
+  width: 95%;
+}
+
+.next {
+  width: 30%;
+  float: right;
+}
