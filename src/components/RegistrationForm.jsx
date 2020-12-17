@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const RegistrationForm = props => {
-    const [ formState, setFormState ] = useState({
+    const [ data, setData ] = useState({
         firstName: "",
         lastName: "",
         email: "",
@@ -15,19 +15,41 @@ const RegistrationForm = props => {
         confirmPassword: ""
     })
 
+    const { firstName, lastName, email, password } = data;
+
     const onChangeHandler = e => {
-        setFormState({
-            ...formState,
+        setData({
+            ...data,
             [e.target.name]: e.target.value
         });
     }
 
-    const onSubmitHandler = e => {
+    const onSubmitHandler = async (e) => {
         e.preventDefault();
-        console.log(formState);
-    }
+        try {
+            const response = await fetch(
+                "https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=registration", 
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify([[
+                    firstName, 
+                    lastName, 
+                    email, 
+                    password, 
+                    new Date().toLocaleString()
+                ]])
+            });
+            const json = await response.json();
+            console.log("Success:", JSON.stringify(json));
+            e.target.reset();
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }    
 
-    
     return (
         <>
             <Navigation />
@@ -48,7 +70,7 @@ const RegistrationForm = props => {
                 <Form.Group className="form-group">
                     <Form.Control required type="password" minLength="6" maxLength="8" size="8" placeholder="Confirm password" name="confirmPassword" onChange={onChangeHandler} />
                 </Form.Group>
-                {formState.password !== formState.confirmPassword ? (
+                {data.password !== data.confirmPassword ? (
                     <span className="text-danger small">Passwords don't match.</span>
                 ) : null}
                 <Row>
@@ -56,7 +78,7 @@ const RegistrationForm = props => {
                         <Form.Label className="text-secondary form-label">Already signed up? <a className="text-secondary" href='/login'>Log in</a></Form.Label>
                     </Col>
                     <Col >
-                        <Button href="/home" variant="warning" className="yellow text-dark signup-button" type="submit">SIGN UP</Button>
+                        <Button href="" variant="warning" className="yellow text-dark signup-button" type="submit">SIGN UP</Button>
                     </Col>
                 </Row>
             </Form>
