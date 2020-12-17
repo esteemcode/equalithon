@@ -15,6 +15,7 @@ import EqualithonSelection from './components/EqualithonSelection';
 import SelectLocation from './components/SelectLocation';
 import JobInfo from './components/JobInfo';
 import EqualithonInfo from './components/EqualithonInfo';
+import ParticipantRegistration from './components/ParticipantRegistration' 
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/sponsorship" exact component={Sponsorship} />
         <Route path="/sponsorhome" exact component={SponsorHome} />
         <Route path="/dandiregistration" exact component={DAndIRegistration} />
+        <Route path="/Participant-Registration" exact component={ParticipantRegistration} />
       </Router>
     </div>
   );
