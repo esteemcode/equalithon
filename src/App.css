@@ -5,8 +5,61 @@ body {
   padding: 0px;
 }
 
+.a-inherit, .a-inherit:hover {
+  color: inherit;
+  text-decoration: inherit;
+  background-color: transparent;
+}
+.nav-list-item-w-hover-yellow {
+  color: #434343;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.nav-list-item-w-hover-yellow:hover {
+  background-color: #FFD966;
+  color: #495057;  
+}
+
+.nav-list-item-w-hover-cyan {
+ background-color: #f1f1f1;
+ border-radius: 0 !important;
+}
+
+.nav-list-item-w-hover-cyan:hover {
+  background-color: #29CABE;
+}
+
 .registrationForm {
   padding-top: 20px;
   width: 40%;
   margin: auto;
+}
+
+.cyan {
+  background-color: #29CABE;
+}
+
+.yellow {
+  background-color: #FFD966;
+}
+
+.home-button {
+  width: 65%;
+}
+
+.home {
+  width: 90px;
+  margin-top: 2%;
+  position: absolute;
+  margin-left: 20%;
+}
+
+.team-select-button {
+  width: 95%;
+}
+
+.next {
+  width: 30%;
+  float: right;
 }

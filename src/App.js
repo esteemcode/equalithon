@@ -10,14 +10,24 @@ import RegistrationGroup from './components/RegistrationGroup';
 import DAndIRegistration from './components/DAndIRegistration';
 import SponsorHome from './components/SponsorHome';
 import Sponsorship from './components/Sponsorship';
+import RegistrationEndNavigation from './components/RegistrationEndNavigation';
+import EqualithonSelection from './components/EqualithonSelection';
+import SelectLocation from './components/SelectLocation';
+import JobInfo from './components/JobInfo';
+import EqualithonInfo from './components/EqualithonInfo';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Route path="/" exact component={RegistrationForm} />
+        <Route path="/registrationendnavigation" exact component={RegistrationEndNavigation} />
         <Route path="/home" exact component={Home} />
         <Route path="/signin" exact component={SignIn} />
+        <Route path="/equalithon-selection" exact component={EqualithonSelection} />
+        <Route path="/select-location" exact component={SelectLocation} />
+        <Route path="/job-info" exact component={JobInfo} />
+        <Route path="/equalithon-info" exact component={EqualithonInfo} />
         <Route path="/contact" exact component={ContactUs} />
         <Route path="/feedback" exact component={Feedback} />
         <Route path="/group-registration" exact component={RegistrationGroup} />
@@ -30,3 +40,4 @@ function App() {
 }
 
 export default App;
+
