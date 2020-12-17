@@ -18,7 +18,7 @@ const EqualithonSelection = () => {
                     <Form.Control required type="text" name="teamName" placeholder="Gender Equalithon" />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="date" name="date" value="2020-12-15"
+                    <Form.Control required type="date" name="date"
                     min="2020-01-01" max="2021-12-31" />
                 </Form.Group>
                 <Form.Group className="form-group">
@@ -34,7 +34,7 @@ const EqualithonSelection = () => {
                     <Form.Control className="mt-3" required type="text" name="teamName" placeholder="BLM Equalithon" />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="date" name="date" value="2020-12-15"
+                    <Form.Control required type="date" name="date"
                     min="2020-01-01" max="2021-12-31" />
                 </Form.Group>
                 <Form.Group className="form-group">
