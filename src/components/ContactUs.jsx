@@ -31,7 +31,7 @@ const ContactUs = () => {
                 {
                     method: "post",
                     body: JSON.stringify([
-                        [formData.nId, formData.cname, formData.cemail, formData.csubject, formData.cmessage]
+                        [formData.nId, formData.cfname, formData.clname, formData.cemail, formData.csubject, formData.cmessage]
                     ]),
                     headers: {
                         "Content-Type": "application/json"
@@ -51,18 +51,19 @@ const ContactUs = () => {
     return (
         <div >
             <Navigation />
-            <form id="contact-form" className="m-auto col-xs-12 col-md-6 pt-4" onSubmit={sendData}>
-                <div className="cyan form-header text-white p-3 mb-3">Contact us</div>
+            <form id="contact-form" className="registrationForm" onSubmit={sendData}>
+                <h5 className="cyan form-header text-white p-3 mb-3">Contact us</h5>
 
-                <input type="text" name="cname" className="form-control mb-2" placeholder="Name" onChange={handleInput} required></input>
+                <input type="text" name="cfname" className="form-control mb-2" placeholder="First Name" onChange={handleInput} required></input>
+                <input type="text" name="clname" className="form-control mb-2" placeholder="Last Name" onChange={handleInput} required></input>
                 <input type="email" name="cemail" className="form-control mb-2" placeholder="E-mail" onChange={handleInput} required ></input>
                 <input type="text" name="csubject" className="form-control mb-3" placeholder="Subject" onChange={handleInput} required></input>
 
-                <div className="form-group">
+                <div>
                     <textarea className="form-control rounded-0" name="cmessage" type="text" placeholder="Message" onChange={handleInput} required></textarea>
                 </div>
 
-                <button onChange={handleShow} className="btn btn-warning float-right pr-4 pl-4" name="submit" type="submit">Send</button>
+                <button onChange={handleShow} variant="warning" className="btn yellow text-dark float-right px-5 mt-4">Send</button>
 
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
@@ -70,7 +71,7 @@ const ContactUs = () => {
                     </Modal.Header>
                     <Modal.Body style={{ color: message === negativeResponse ? 'red' : 'green' }}>{message}</Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
+                        <Button variant="light" onClick={handleClose}>
                             Close
                        </Button>
                     </Modal.Footer>
