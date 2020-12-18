@@ -62,7 +62,7 @@ const JobInfo = () => {
                 </Form.Group>
                 <Row>
                     <Col>
-                        <Button href="" size="lg" variant="warning" className="yellow text-dark next mx-auto">Next</Button>
+                        <Button href="./company-rating" size="lg" variant="warning" className="yellow text-dark next mx-auto">Next</Button>
                     </Col>
                 </Row>
             </Form>
