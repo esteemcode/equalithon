@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import { Container, Form, Button, Col, Row } from 'react-bootstrap';
 
-const goalsList = [
-    { name: 'Improve your Employers brand', checked: true },
-    { name: 'Recruit diverse profiles', checked: false },
-    { name: 'Improve your inclusiveness', checked: false },
-    { name: 'Give back to the Women community', checked: false },
-    { name: 'Other - provide details', checked: false },
-]
-
 const Sponsorship = () => {
-    const [goals, setGoals] = useState(goalsList);
+    const [goals, setGoals] = useState([
+        { name: 'Improve your Employers brand', checked: true },
+        { name: 'Recruit diverse profiles', checked: false },
+        { name: 'Improve your inclusiveness', checked: false },
+        { name: 'Give back to the Women community', checked: false },
+        { name: 'Other - provide details', checked: false }
+    ]);
     const [selectedGoal, setSelectedGoal] = useState(0);
     const [brandName, setBrandName] = useState('');
     const [logo, setLogo] = useState('');
@@ -29,6 +27,7 @@ const Sponsorship = () => {
         });
         setGoals(newGoals);
         setSelectedGoal(index);
+        setGoalsSelected(true)
     }
 
     const handleFormSubmit = (event) => {
@@ -40,28 +39,47 @@ const Sponsorship = () => {
             description: companyDescription,
             mission: companyMission
         }
-        console.log(formData);
-        console.log('form submitted');
+        postData(formData);
+    }
+
+    const postData = async (formData) => {
+        try {
+            const response = await fetch(`https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=sponsorRegistration`, {
+                method: "post",
+                body: JSON.stringify([[formData.goal, formData.brandName, formData.logo, formData.description, formData.mission]]),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const json = await response.json();
+            console.log("Success:", JSON.stringify(json));
+            console.log('form submitted');
+        } catch (error) {
+            console.error("Error:", error);
+        }
     }
 
     return (
-        <Container className="justify-content-md-center">
+        <Container className="registrationForm">
             <Row className="justify-content-md-center">
-                <Col lg={4} md={6} s={10} xs={12}>
+                <Col lg={12} md={12} sm={12} xs={12}>
                     <Form onSubmit={handleFormSubmit}>
                         {
                             !goalsSelected ? (
                                 <>
-                                    <Container className="justify-content-md-center" style={{ backgroundColor: '#36b3a8', color: '#fff' }} >
-                                        <h3>Welcome to Essteem</h3>
-                                        <p>Please select your primary goal with Essteem</p>
-                                    </Container>
+                                    <Row className="cyan form-header text-white pt-1 pb-1 col-12 mt-0 ml-0 mr-0 mb-3">
+                                        <Row className="m-0 col-12 pl-0 pr-0 pt-2 pb-0">
+                                            <h4>Welcome to Essteem</h4>
+                                        </Row>
+                                        <Row className="m-0 col-12 pl-0 pr-0 pt-0 pb-1">
+                                            <h6>Please select your primary goal with Essteem</h6>
+                                        </Row>
+                                    </Row>
                                     {
                                         goals.map((item, index) => {
                                             return (
                                                 <Form.Check
-                                                    style={index === selectedGoal ? { backgroundColor: '#fde026' } : null}
-                                                    className="radio-button__hidden"
+                                                    className="radio-button__hidden form-control"
                                                     key={index}
                                                     defaultChecked={item.checked}
                                                     name={`goals`}
@@ -73,33 +91,28 @@ const Sponsorship = () => {
                                             )
                                         })
                                     }
-                                    <Button
-                                        onClick={() =>
-                                            setGoalsSelected(true)}
-                                        type="submit"
-                                        variant="primary"
-                                        size="lg" block>
-                                        Next
-                                </Button>
                                 </>
                             ) : (
                                     <>
-                                        <Container className="justify-content-md-center" style={{ backgroundColor: '#36b3a8', color: '#fff' }} >
-                                            <h3>Create a space for your company</h3>
-                                        </Container>
+                                        <Row className="yellow form-header text-white pt-1 pb-1 col-12 mt-0 ml-0 mr-0 mb-3">
+                                            <Row className="m-0 col-12 pl-0 pr-0 pt-2 pb-2">
+                                                <h4>Create a space for your company</h4>
+                                            </Row>
+                                        </Row>
                                         <Form.Group>
                                             <Form.Control type="text" placeholder="Employer's brand name" value={brandName} onChange={(e) => setBrandName(e.target.value)} required />
                                         </Form.Group>
                                         <Form.Group>
-                                            <Form.Control type="text" placeholder="Upload logo" value={logo} onChange={(e) => setLogo(e.target.value)} required />
+                                            <Form.Control type="url" placeholder="Logo Url" value={logo} onChange={(e) => setLogo(e.target.value)} required />
                                         </Form.Group>
                                         <Form.Group>
-                                            <Form.Control as="textarea" placeholder="Describe your company" value={companyDescription} onChange={(e) => setCompanyDescription(e.target.value)} required />
+                                            <Form.Control type="text" as="textarea" placeholder="Describe your company" value={companyDescription} onChange={(e) => setCompanyDescription(e.target.value)} required />
                                         </Form.Group>
                                         <Form.Group>
-                                            <Form.Control as="textarea" placeholder="Describe what you do for women" value={companyMission} onChange={(e) => setCompanyMission(e.target.value)} />
+                                            <Form.Control type="text" as="textarea" placeholder="Describe what you do for women" value={companyMission} onChange={(e) => setCompanyMission(e.target.value)} />
                                         </Form.Group>
                                         <Button
+                                            className="cyan a-inherit border-0 cyan-hover text-white"
                                             type="submit"
                                             variant="primary"
                                             size="lg" block>

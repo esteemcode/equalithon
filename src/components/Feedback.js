@@ -70,6 +70,8 @@ const teams = [
 const Feedback = () => {
     const [teamsData, setTeamsData] = useState(teams);
     const [currentTeam, setCurrentTeam] = useState(0);
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [formError, setFormError] = useState(false);
 
     const handleCheckboxChange = (teamID, propToUpdate) => {
         let newTeamsData = [...teamsData];
@@ -77,10 +79,67 @@ const Feedback = () => {
         setTeamsData(newTeamsData);
     }
 
+    const handleSubmit = () => {
+        console.log(currentTeam);
+        const teamData = teamsData[currentTeam];
+        postData(teamData);
+    }
+
+    const postData = async (teamData) => {
+        try {
+            const response = await fetch(`https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=feedback`, {
+                method: "post",
+                body: JSON.stringify([[
+                    teamData.id,
+                    teamData.thoroughResearch,
+                    teamData.designThinkingMethodology,
+                    teamData.featureListing,
+                    teamData.valueBasedFeatures,
+                    teamData.designForUserXP,
+                    teamData.prototypeAchieved,
+                    teamData.codeArchitecture,
+                    teamData.codingLaunched,
+                    teamData.oneCoreFeatureCompleted,
+                    teamData.twoCoreFeaturesCompleted,
+                    teamData.threecoreFeaturesCoded,
+                    teamData.fullMVPCompleted,
+                    teamData.fullMVPTested
+                ]]),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const json = await response.json();
+            console.log("Success:", JSON.stringify(json));
+            console.log('form submitted');
+            setFormSubmitted(true);
+            setFormError(false);
+        } catch (error) {
+            console.error("Error:", error);
+            setFormError(true);
+            setFormSubmitted(false);
+        }
+    }
+
     return (
         <div className="container justify-content-center w-50">
             <form className="row justify-content-end align-self-center">
                 <div className="row w-100 justify-content-center">
+                    {
+                        !formSubmitted ? (
+                            <div className="alert alert-danger" role="alert">
+                                Whoops! Something went wrong.
+                            </div>)
+                            : null
+                    }
+                    {
+                        !formError ? (
+                            <div className="alert alert-success" role="alert">
+                                Thank you. We apprieciate your feedback.
+                            </div>
+                        ) : null
+                    }
+
                     <div className="dropdown w-100">
                         <div className="form-group">
                             <label htmlFor="team-selection">Select team</label>
@@ -230,7 +289,7 @@ const Feedback = () => {
                     </div>
                 </div>
                 <div className="row w-100 justify-content-end">
-                    <button type="button" className="btn btn-primary align-self-end">Submit Feedback</button>
+                    <button type="button" className="btn btn-primary align-self-end cyan border-0 cyan-hover" onClick={() => handleSubmit()}>Submit Feedback</button>
                 </div>
             </form>
         </div>
