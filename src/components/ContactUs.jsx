@@ -31,7 +31,7 @@ const ContactUs = () => {
                 {
                     method: "post",
                     body: JSON.stringify([
-                        [formData.nId, formData.cfname, formData.clname, formData.cemail, formData.csubject, formData.cmessage]
+                        [formData.cId, formData.cfname, formData.clname, formData.cemail, formData.csubject, formData.cmessage]
                     ]),
                     headers: {
                         "Content-Type": "application/json"
