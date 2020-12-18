@@ -63,3 +63,17 @@ body {
   width: 30%;
   float: right;
 }
+
+.radio-button__hidden {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.radio-button__hidden:hover { background-color:  #FFD966;}
+.radio-button__hidden input {
+  opacity: 0;
+}
+
+.cyan-hover:hover {
+  background-color: #29CABE;
+}
