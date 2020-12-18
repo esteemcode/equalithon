@@ -16,7 +16,7 @@ import SelectLocation from './components/SelectLocation';
 import JobInfo from './components/JobInfo';
 import EqualithonInfo from './components/EqualithonInfo';
 import CompanyRating from './components/CompanyRating';
-
+import ParticipantRegistration from './components/ParticipantRegistration';
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
         <Route path="/sponsorhome" exact component={SponsorHome} />
         <Route path="/dandiregistration" exact component={DAndIRegistration} />
         <Route path="/company-rating" exact component={CompanyRating} />
-       
+        <Route path="/Participant-Registration" exact component={ParticipantRegistration} />
       </Router>
     </div>
   );
