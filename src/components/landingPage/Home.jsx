@@ -29,14 +29,14 @@ const Home = () => {
                 </Row>
                 <Row className="text-center">
                     <Col lg={{ span: 6, offset: 3 }}>
-                        <Button href="/home" className="home-button dark-gray" variant="dark" size="lg">
+                        <Button href="/slack" className="home-button dark-gray" variant="dark" size="lg">
                             Go to Slack
                         </Button>{' '}
                     </Col>
                 </Row>
             </Container>
         </>
-        
+
     )
 }
 
