@@ -1,5 +1,9 @@
+import React from 'react';
+import Navigation from './landingPage/navigation/Navigation.jsx';
 import { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './landingPage/home.css';
 
 const goalsList = [
     { name: 'Increase your cash flow', checked: true },
@@ -28,9 +32,11 @@ const DAndIRegistration = () => {
     }
 
     return (
-        <Container className="justify-content-md-center">
+        <>
+        <Navigation />
+        <Container className="registrationForm">
             <Row className="justify-content-md-center">
-                <Col lg={4} md={6} s={10} xs={12}>
+                <Col lg={12} md={12} sm={12} xs={12}>
                     <Container className="justify-content-md-center" style={{ backgroundColor: '#36b3a8', color: '#fff' }} >
                         <h3>Welcome to Essteem</h3>
                         <p>Please select from the following options</p>
@@ -64,6 +70,7 @@ const DAndIRegistration = () => {
 
             </Row>
         </Container>
+        </>
     )
 }
 

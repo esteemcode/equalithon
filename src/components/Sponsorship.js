@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Container, Form, Button, Col, Row } from 'react-bootstrap';
+import Navigation from './landingPage/navigation/Navigation.jsx';
 
 const Sponsorship = () => {
     const [goals, setGoals] = useState([
@@ -60,6 +61,8 @@ const Sponsorship = () => {
     }
 
     return (
+        <>
+        <Navigation />
         <Container className="registrationForm">
             <Row className="justify-content-md-center">
                 <Col lg={12} md={12} sm={12} xs={12}>
@@ -126,6 +129,7 @@ const Sponsorship = () => {
             </Row>
 
         </Container>
+        </>
     )
 }
 
