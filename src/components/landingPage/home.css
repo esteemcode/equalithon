@@ -20,12 +20,16 @@
 }
 
 .form-group {
+    margin-top: 0;
     margin-bottom: .4rem;
+    padding: 0px;
 }
 
 .form-label {
-    margin: 20px 0 0 20px;
-    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0px;
+    font-size: 16px;
 }
 
 .signup-button {
