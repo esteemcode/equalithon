@@ -56,7 +56,7 @@ export class SelectLocation extends Component {
 						</Form.Control>
 					</Form.Group>
 					<Form.Group className="form-group">
-						<Form.Control required type="text" name="state" placeholder="State (if applicable)" />
+						<Form.Control required type="text" name="state" placeholder="State or Region (if applicable)" />
 					</Form.Group>
 					<Form.Group className="form-group">
 						<Form.Control

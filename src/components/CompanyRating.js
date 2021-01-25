@@ -15,8 +15,8 @@ const CompanyRating = () => {
         </div>
 
         <p className="m-2 p-2 px-4">
-          Please answer below: we're building agreat tool for you to find great
-          teams. The information you enter is anonymized.
+          Please answer below: we're building a great tool for you to find great
+          teams. The information you enter is anonymous.
         </p>
         <Card className="mt-3">
           <Card.Header>I identify as</Card.Header>
