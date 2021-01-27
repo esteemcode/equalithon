@@ -8,6 +8,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Countries from "./Countries";
+import States from "./USAstates"
 
 export class SelectLocation extends Component {
 	constructor() {
@@ -15,7 +16,8 @@ export class SelectLocation extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.state = {
 			countries: Countries,
-			selectedCountry: "Afghanistan",
+			states: States,
+			selectedCountry: "United States of America",
 		};
 	}
 
@@ -24,9 +26,6 @@ export class SelectLocation extends Component {
 	}
 
 	render() {
-		let country = this.state.countries.filter((country) => {
-			return country.name === this.state.selectedCountry;
-		});
 
 		return (
 			<>
@@ -47,17 +46,16 @@ export class SelectLocation extends Component {
 							})}
 						</Form.Control>
 					</Form.Group>
-					<Form.Group className="form-group">
-						<Form.Label>Timezone</Form.Label>
-						<Form.Control as="select">
-							{country[0].timezones.map((time, i) => {
-								return <option>{time}</option>;
-							})}
-						</Form.Control>
-					</Form.Group>
-					<Form.Group className="form-group">
-						<Form.Control required type="text" name="state" placeholder="State or Region (if applicable)" />
-					</Form.Group>
+					{ this.state.selectedCountry === 'United States of America' ? (
+											<Form.Group className="form-group">
+											<Form.Label>States</Form.Label>
+											<Form.Control as="select">
+												{this.state.states.map((state) => {
+													return <option>{state.name}</option>;
+												})}
+											</Form.Control>
+										</Form.Group>
+					) : ( <div />)}
 					<Form.Group className="form-group">
 						<Form.Control
 							required
@@ -65,6 +63,9 @@ export class SelectLocation extends Component {
 							name="city"
 							placeholder="City"
 						/>
+					</Form.Group>
+					<Form.Group className="form-group">
+						<Form.Control required type="text" name="postcode" placeholder="Postcode" />
 					</Form.Group>
 					<Row>
 						<Col>
