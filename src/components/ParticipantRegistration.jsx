@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {  Container, Form } from 'react-bootstrap';
+import { Row, Col, Container, Form } from 'react-bootstrap';
 import Navigation from './landingPage/navigation/Navigation';
 
 const reasonsList = [
@@ -32,35 +32,37 @@ const ParticipantRegistration = () => {
     return (
         <>
         <Navigation />
-        <div className="m-auto pt-3 col-4">
-                    <div className="border">
-                    <div className="cyan form-header text-white p-2" >
-                        <h3>Welcome to Essteem</h3>
-                        <p>Please select your primary reason for joining</p>
-                        </div>
-                    <Container className="my-4">
+                    <Container className="participantForm">
+                    <Row className="justify-content-md-center">
+					<Col lg={12} md={12} sm={12} xs={12}>
                     <Form>
+                    <Row className="cyan form-header text-white pt-1 pb-1 col-12 mt-0 ml-0 mr-0 mb-3">
+						    <Row className="m-0 col-12 pl-0 pr-0 pt-2 pb-0">
+						    	<h4>Welcome to Essteem</h4>
+						    </Row>
+						    <Row className="m-0 col-12 pl-0 pr-0 pt-0 pb-1">
+						    	<h6>Please select your primary reason for joining</h6>
+						    </Row>
+					    </Row>
                         {
                             reasons.map((item, index) => {
                                 return (
-                                    
+
                                         <div
                                         className="border btn btn-block rounded p-2 my-1"
                                         style={index === isActive ? { backgroundColor: '#fde026' } : null}
                                         defaultChecked={item.checked}
                                         onClick={() => handleSetIsActive(index)}
                                         > {item.name}</div>
-                                    
+
                                 )
                             })
                         }
-
-                    </Form>
+                        </Form>
+                        </Col>
+                        </Row>
                     </Container>
-                    
-                    </div>
-                    </div>
-                    </>
+                        </>
     )
 }
 

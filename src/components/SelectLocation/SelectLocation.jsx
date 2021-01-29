@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { Component } from "react";
-import Navigation from './landingPage/navigation/Navigation';
+import Navigation from '../landingPage/navigation/Navigation';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
