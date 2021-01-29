@@ -12,12 +12,13 @@ import SponsorHome from './components/SponsorHome';
 import Sponsorship from './components/Sponsorship';
 import RegistrationEndNavigation from './components/RegistrationEndNavigation';
 import EqualithonSelection from './components/EqualithonSelection';
-import SelectLocation from './components/SelectLocation/SelectLocation';
+import SelectLocation from './components/SelectLocation';
 import JobInfo from './components/JobInfo';
 import EqualithonInfo from './components/EqualithonInfo';
 import CompanyRating from './components/CompanyRating';
 import ParticipantRegistration from './components/ParticipantRegistration';
 import Slack from './components/Slack';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/dandiregistration" exact component={DAndIRegistration} />
         <Route path="/company-rating" exact component={CompanyRating} />
         <Route path="/Participant-Registration" exact component={ParticipantRegistration} />
+        <Route path="/profile" exact component={Profile} />
       </Router>
     </div>
   );
