@@ -93,7 +93,7 @@ const RegistrationGroup = () => {
       <Navigation />
       <form id="contact-form" className="registrationForm" onSubmit={sendData}>
         <Container className="cyan form-header text-white p-2 mb-3">
-          <h5> One last thing.</h5>
+          <h5> Congrats! You are registered.</h5>
           <p> Invite 3 peers: the more to help, the merrier!</p>
         </Container>
 

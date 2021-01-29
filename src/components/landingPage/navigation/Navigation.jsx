@@ -14,15 +14,15 @@ const Navigation = () => {
                     width="150px"
                     alt="Essteem logo"
                 ></Image>
-            </Navbar.Brand>            
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                 <Nav>
-                <Nav.Link href="#link" className="text-light">Link 1</Nav.Link>
-                <Nav.Link href="contact" className="text-light">Contact Us</Nav.Link>
+                <Nav.Link href="#link" className="text-dark">Link 1</Nav.Link>
+                <Nav.Link href="contact" className="text-dark">Contact Us</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
-        </Navbar>        
+        </Navbar>
     )
 }
 
