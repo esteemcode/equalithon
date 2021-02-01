@@ -17,6 +17,8 @@ import JobInfo from './components/JobInfo';
 import EqualithonInfo from './components/EqualithonInfo';
 import CompanyRating from './components/CompanyRating';
 import ParticipantRegistration from './components/ParticipantRegistration';
+import Slack from './components/Slack';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
         <Route path="/home" exact component={Home} />
         <Route path="/signin" exact component={SignIn} />
         <Route path="/equalithon-selection" exact component={EqualithonSelection} />
+        <Route path="/slack" exact component={Slack} />
         <Route path="/select-location" exact component={SelectLocation} />
         <Route path="/job-info" exact component={JobInfo} />
         <Route path="/equalithon-info" exact component={EqualithonInfo} />
@@ -38,6 +41,7 @@ function App() {
         <Route path="/dandiregistration" exact component={DAndIRegistration} />
         <Route path="/company-rating" exact component={CompanyRating} />
         <Route path="/Participant-Registration" exact component={ParticipantRegistration} />
+        <Route path="/profile" exact component={Profile} />
       </Router>
     </div>
   );

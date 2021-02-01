@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from './landingPage/navigation/Navigation';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import {Row, Col, Form, Button} from 'react-bootstrap';
+import {Redirect} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const RegistrationForm = props => {
@@ -12,7 +10,8 @@ const RegistrationForm = props => {
         lastName: "",
         email: "",
         password: "",
-        confirmPassword: ""
+        confirmPassword: "",
+        redirect: false
     })
 
     const { firstName, lastName, email, password } = data;
@@ -28,27 +27,30 @@ const RegistrationForm = props => {
         e.preventDefault();
         try {
             const response = await fetch(
-                "https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=registration", 
+                "https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=registration",
             {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify([[
-                    firstName, 
-                    lastName, 
-                    email, 
-                    password, 
+                    firstName,
+                    lastName,
+                    email,
+                    password,
                     new Date().toLocaleString()
                 ]])
             });
             const json = await response.json();
             console.log("Success:", JSON.stringify(json));
             e.target.reset();
+            setData({
+                redirect: true
+            });
         } catch (error) {
             console.error("Error:", error);
         }
-    }    
+    }
 
     return (
         <>
@@ -80,6 +82,7 @@ const RegistrationForm = props => {
                     <Col >
                         <Button href="" variant="warning" className="yellow text-dark signup-button" type="submit">SIGN UP</Button>
                     </Col>
+                    {data.redirect ? (<Redirect to='/registrationendnavigation' />) : (<div />)}
                 </Row>
             </Form>
         </>
