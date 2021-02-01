@@ -42,6 +42,7 @@ const Country = () => {
             className="form-control"
             value={state.country}
             onChange={handleCountryChange}
+            priorityOptions={["US"]}
         />
         </div>
 
@@ -51,7 +52,7 @@ const Country = () => {
         value={stateRegion.region}
         onChange={handleRegionChange}
     />
-   
+
     </>
 
     )

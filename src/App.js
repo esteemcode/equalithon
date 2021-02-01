@@ -19,6 +19,7 @@ import CompanyRating from './components/CompanyRating';
 import ParticipantRegistration from './components/ParticipantRegistration';
 import Slack from './components/Slack';
 import Profile from './components/Profile';
+import JoinTeam from './components/JoinTeam'
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/company-rating" exact component={CompanyRating} />
         <Route path="/Participant-Registration" exact component={ParticipantRegistration} />
         <Route path="/profile" exact component={Profile} />
+        <Route path="/joinTeam" exact component={JoinTeam} />
       </Router>
     </div>
   );

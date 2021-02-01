@@ -1,26 +1,27 @@
 import React from 'react';
 import Navigation from './landingPage/navigation/Navigation';
-import {Row,Col,Form,Button} from 'react-bootstrap';
+import {Row,Col,Form,Button,Container} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-/* THIS
-LISTS
-ALL
-ACTIVE
-EQUALITHONS
-TO
-JOIN */
-
-const EqualithonSelection = () => {
+const JoinTeam = () => {
 
     return (
         <>
             <Navigation />
             <Button href="/home" size="lg" variant="info" className="cyan text-white home">Home</Button>
+            <Button href="" size="lg" variant="info" className="cyan text-white team-selection">Team Area</Button>
             <Form className="registrationForm">
-                <h5 className="cyan form-header text-white p-3 mb-3">Equalithon ＆ Team Selection</h5>
+            <Container className="cyan form-header text-white p-2 mb-3">
+          <h5> You Are Registered!</h5>
+          <h5> Time to Join or Create a Team</h5>
+        </Container>
+
+        <p className="cyan-text">You can also wait to be recruited by, or assigned to a team.</p>
+        <Button href="" size="lg" variant="warning" className="yellow text-dark button-center" block>Create a Team</Button>
+        <p className="cyan-text">OR JOIN ONE</p>
+
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" name="teamName" placeholder="Gender Equalithon" />
+                    <Form.Control required type="text" name="teamName" placeholder="Team 1 - No Name yet" />
                 </Form.Group>
                 <Form.Group className="form-group">
                     <Form.Control required type="date" name="date"
@@ -72,4 +73,4 @@ const EqualithonSelection = () => {
     )
 }
 
-export default EqualithonSelection;
+export default JoinTeam;

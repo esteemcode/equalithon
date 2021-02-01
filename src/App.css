@@ -32,6 +32,7 @@ body {
 
 .registrationForm {
   padding-top: 20px;
+  padding-bottom: 20px;
   width: 40%;
   margin: auto;
 }
@@ -46,6 +47,14 @@ body {
   background-color: #29CABE;
 }
 
+.cyan-text {
+  color: #29CABE;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .yellow {
   background-color: #FFD966;
 }
@@ -57,6 +66,13 @@ body {
 .home {
   width: 90px;
   margin-top: 2%;
+  position: absolute;
+  margin-left: 20%;
+}
+
+.team-selection {
+  width: 90px;
+  margin-top: 8%;
   position: absolute;
   margin-left: 20%;
 }
@@ -82,4 +98,8 @@ body {
 
 .cyan-hover:hover {
   background-color: #29CABE;
+}
+
+.button-center {
+  text-align: center;
 }
