@@ -81,6 +81,11 @@ body {
   width: 95%;
 }
 
+.request-to-join-team {
+  margin-right: 20%;
+  float: right;
+}
+
 .next {
   width: 30%;
   float: right;

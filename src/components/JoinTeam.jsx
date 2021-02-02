@@ -16,58 +16,70 @@ const JoinTeam = () => {
           <h5> Time to Join or Create a Team</h5>
         </Container>
 
-        <p className="cyan-text">You can also wait to be recruited by, or assigned to a team.</p>
+
+        <h6 className="cyan-text">You can also wait to be recruited by, or assigned to a team.</h6>
         <Button href="" size="lg" variant="warning" className="yellow text-dark button-center" block>Create a Team</Button>
-        <p className="cyan-text">OR JOIN ONE</p>
+        <h6 className="cyan-text">OR JOIN ONE</h6>
 
                 <Form.Group className="form-group">
                     <Form.Control required type="text" name="teamName" placeholder="Team 1 - No Name yet" />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="date" name="date"
-                    min="2020-01-01" max="2021-12-31" />
+                    <Form.Control required type="text" name="challenge" placeholder="Challenge selected: Challenge 1" />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" name="nonProfit" placeholder="Nonprofit Supported" />
+                    <Form.Control required type="text" name="teamLead" placeholder="Team lead: @Slack Handle Name" />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" name="sponsor" placeholder="Sponsor A/B/C" />
+                    <Form.Control required type="text" name="status" placeholder="Status: looking for members" />
                 </Form.Group>
                 <Form.Group name="teamDescription">
-                    <Form.Control as="textarea" rows={3} placeholder="Gender Equalithon team description here..." />
+                    <Form.Control as="textarea" rows={3} placeholder="Need: Front end developer, Backend developer, UX-UI developer"
+                />
                 </Form.Group>
-                <Row className="text-center mt-3">
-                    <Col lg={{ span: 6}}>
-                        <Button href="/equalithon-info" size="lg" variant="info" className="cyan text-white team-select-button mx-auto">Learn More</Button>
-                    </Col>
-                    <Col lg={{ span: 6}}>
-                        <Button href="/select-location" size="lg" variant="warning" className="yellow text-dark team-select-button mx-auto">Participate</Button>
-                    </Col>
+                <Container>
+                <Row>
+                <Col md={8}></Col>
+                    <Col md={4}>
+                        <Row className="text-center mt-2">
+                        <Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team ml-5 mr-2">Request to Join</Button>
+                        </Row>
+                        <Row className="text-center mt-2">
+                        <Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team mr-2">Request to Join as a Mentor</Button>
+                        </Row>
+                        </Col>
                 </Row>
+                </Container>
+                <br />
                 <Form.Group className="form-group">
-                    <Form.Control className="mt-3" required type="text" name="teamName" placeholder="BLM Equalithon" />
+                    <Form.Control required type="text" name="teamName" placeholder="Equalizers" />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="date" name="date"
-                    min="2020-01-01" max="2021-12-31" />
+                    <Form.Control required type="text" name="challenge" placeholder="Challenge selected: Challenge 2" />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" name="nonProfit" placeholder="Nonprofit Supported" />
+                    <Form.Control required type="text" name="teamLead" placeholder="Team lead: @Slack Handle Name" />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" name="sponsor" placeholder="Sponsor A/B/C" />
+                    <Form.Control required type="text" name="status" placeholder="Status: looking for members" />
                 </Form.Group>
                 <Form.Group name="teamDescription">
-                    <Form.Control as="textarea" rows={3} placeholder="BLM Equalithon team description here..." />
+                    <Form.Control as="textarea" rows={3} placeholder="Need: Front end developer, Backend developer, UX-UI developer"
+                />
                 </Form.Group>
-                <Row className="text-center mt-3">
-                    <Col lg={{ span: 6}}>
-                        <Button href="/equalithon-info" size="lg" variant="info" className="cyan text-white team-select-button mx-auto">Learn More</Button>
-                    </Col>
-                    <Col lg={{ span: 6}}>
-                        <Button href="/select-location" size="lg" variant="warning" className="yellow text-dark team-select-button mx-auto">Participate</Button>
-                    </Col>
+                <Container>
+                <Row>
+                <Col md={8}></Col>
+                    <Col md={4}>
+                        <Row className="text-center mt-2">
+                        <Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team ml-5 mr-2">Request to Join</Button>
+                        </Row>
+                        <Row className="text-center mt-2">
+                        <Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team mr-2">Request to Join as a Mentor</Button>
+                        </Row>
+                        </Col>
                 </Row>
+                </Container>
             </Form>
         </>
     )

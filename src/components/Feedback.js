@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navigation from './landingPage/navigation/Navigation';
 
 const teams = [
     {
@@ -122,6 +123,8 @@ const Feedback = () => {
     }
 
     return (
+        <>
+        <Navigation />
         <div className="container justify-content-center w-50">
             <form className="row justify-content-end align-self-center">
                 <div className="row w-100 justify-content-center">
@@ -293,6 +296,7 @@ const Feedback = () => {
                 </div>
             </form>
         </div>
+        </>
     )
 }
 
