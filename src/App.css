@@ -47,9 +47,12 @@ body {
   background-color: #29CABE;
 }
 
+.header-center {
+  text-align: center;
+}
+
 .cyan-text {
   color: #29CABE;
-  font-weight: bold;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -81,9 +84,9 @@ body {
   width: 95%;
 }
 
-.request-to-join-team {
-  margin-right: 20%;
+.select {
   float: right;
+  width: 40%;
 }
 
 .next {

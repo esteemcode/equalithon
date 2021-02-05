@@ -19,7 +19,9 @@ import CompanyRating from './components/CompanyRating';
 import ParticipantRegistration from './components/ParticipantRegistration';
 import Slack from './components/Slack';
 import Profile from './components/Profile';
-import JoinTeam from './components/JoinTeam'
+import JoinTeam from './components/JoinTeam';
+import TeamAcknowledgement from './components/TeamAcknowledgement';
+import CreateTeam from './components/CreateTeam';
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
         <Route path="/Participant-Registration" exact component={ParticipantRegistration} />
         <Route path="/profile" exact component={Profile} />
         <Route path="/joinTeam" exact component={JoinTeam} />
+        <Route path="/TeamAcknowledgement" exact component={TeamAcknowledgement}/>
+        <Route path="/CreateTeam" exact component={CreateTeam}/>
       </Router>
     </div>
   );
