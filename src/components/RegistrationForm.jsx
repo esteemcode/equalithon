@@ -50,6 +50,23 @@ const RegistrationForm = props => {
         } catch (error) {
             console.error("Error:", error);
         }
+
+ const emailNewMember = async (email) => {
+            try {
+                const response = await fetch(`
+                https://v1.nocodeapi.com/josephineamos/mailchimp/cYRhtFLOTynxNLrh/members?list_id=5c5b621efb&email_address=${email}&status=subscribed`, {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+                const json = await response.json();
+                console.log("Success:", JSON.stringify(json));
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        }
+        emailNewMember(email);
     }
 
     return (

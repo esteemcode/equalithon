@@ -1,15 +1,44 @@
-import React from 'react';
+import {React, useState} from 'react';
 import Navigation from './landingPage/navigation/Navigation';
 import {Row,Col,Form,Button,Container} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const JoinTeam = () => {
+    const [teamButton, setTeamButton] = useState(true)
+
+    const [request, setRequest] = useState(true)
+
+    const onRequestClick = () => {
+        setRequest(!request)
+        setTeamButton(!teamButton)
+    }
+
+    const [request2, setRequest2] = useState(true)
+
+    const onRequestClick2 = () => {
+        setRequest2(!request2)
+        setTeamButton(!teamButton)
+    }
+
+    const [request3, setRequest3] = useState(true)
+
+    const onRequestClick3 = () => {
+        setRequest3(!request3)
+        setTeamButton(!teamButton)
+    }
+
+    const [request4, setRequest4] = useState(true)
+
+    const onRequestClick4 = () => {
+        setRequest4(!request4)
+        setTeamButton(!teamButton)
+    }
 
     return (
         <>
             <Navigation />
-            <Button href="/home" size="lg" variant="info" className="cyan text-white home">Home</Button>
-            <Button href="" size="lg" variant="info" className="cyan text-white team-selection">Team Area</Button>
+            <Button href="/home" size="md" variant="info" className="cyan text-white home">Home</Button>
+            { teamButton ? (<div />) : (<Button href="" size="md" variant="info" className="cyan text-white team-selection">Team Area</Button>)}
             <Form className="registrationForm">
             <Container className="cyan form-header text-white p-2 mb-3">
           <h5> You Are Registered!</h5>
@@ -42,10 +71,10 @@ const JoinTeam = () => {
                 <Col md={8}></Col>
                     <Col md={4}>
                         <Row className="text-center mt-2">
-                        <Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team ml-5 mr-2">Request to Join</Button>
+                        {request ? (<Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team ml-5 mr-2" onClick={() => onRequestClick()}>Request to Join</Button>) : (<Button href="" size="sm" variant="secondary" className="gray text-light request-to-join-team ml-5 mr-2" onClick={() => onRequestClick()}>Requested</Button>)}
                         </Row>
                         <Row className="text-center mt-2">
-                        <Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team mr-2">Request to Join as a Mentor</Button>
+                        {request2 ? (<Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team ml-5 mr-2" onClick={() => onRequestClick2()}>Request to Join as a Mentor</Button>) : (<Button href="" size="sm" variant="secondary" className="gray text-light request-to-join-team ml-5 mr-2" onClick={() => onRequestClick2()}>Requested</Button>)}
                         </Row>
                         </Col>
                 </Row>
@@ -72,10 +101,10 @@ const JoinTeam = () => {
                 <Col md={8}></Col>
                     <Col md={4}>
                         <Row className="text-center mt-2">
-                        <Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team ml-5 mr-2">Request to Join</Button>
+                            {request3 ? (<Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team ml-5 mr-2" onClick={() => onRequestClick3()}>Request to Join</Button>) : (<Button href="" size="sm" variant="secondary" className="gray text-light request-to-join-team ml-5 mr-2" onClick={() => onRequestClick3()}>Requested</Button>)}
                         </Row>
                         <Row className="text-center mt-2">
-                        <Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team mr-2">Request to Join as a Mentor</Button>
+                        {request4 ? (<Button href="" size="sm" variant="warning" className="yellow text-dark request-to-join-team ml-5 mr-2" onClick={() => onRequestClick4()}>Request to Join as a Mentor</Button>) : (<Button href="" size="sm" variant="secondary" className="gray text-light request-to-join-team ml-5 mr-2" onClick={() => onRequestClick4()}>Requested</Button>)}
                         </Row>
                         </Col>
                 </Row>
