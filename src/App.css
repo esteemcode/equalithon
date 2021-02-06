@@ -62,6 +62,14 @@ body {
   background-color: #FFD966;
 }
 
+.light-gray {
+  background-color: rgb(239, 239, 239)
+}
+
+.medium-gray {
+  background-color: rgb(150, 149, 149)
+}
+
 .home-button {
   width: 65%;
 }
@@ -81,7 +89,7 @@ body {
 }
 
 .team-select-button {
-  width: 95%;
+  width: 100%;
 }
 
 .select {

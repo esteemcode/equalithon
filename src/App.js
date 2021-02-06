@@ -22,6 +22,9 @@ import Profile from './components/Profile';
 import JoinTeam from './components/JoinTeam';
 import TeamAcknowledgement from './components/TeamAcknowledgement';
 import CreateTeam from './components/CreateTeam';
+import TeamArea from './components/TeamArea';
+import YourEqualithons from './components/YourEqualithons';
+import TeamStatus from './components/TeamStatus';
 
 function App() {
   return (
@@ -48,6 +51,9 @@ function App() {
         <Route path="/joinTeam" exact component={JoinTeam} />
         <Route path="/TeamAcknowledgement" exact component={TeamAcknowledgement}/>
         <Route path="/CreateTeam" exact component={CreateTeam}/>
+        <Route path="/TeamArea" exact component={TeamArea}/>
+        <Route path="/YourEqualithons" exact component={YourEqualithons}/>
+        <Route path="/TeamStatus" exact component={TeamStatus}/>
       </Router>
     </div>
   );

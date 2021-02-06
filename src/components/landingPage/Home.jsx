@@ -19,7 +19,7 @@ const Home = () => {
                 </Row>
                 <Row className="text-center">
                     <Col lg={{ span: 6, offset: 3 }}>
-                        <Button className="home-button yellow" variant="warning" size="lg">
+                        <Button href="/TeamArea" className="home-button yellow" variant="warning" size="lg">
                             Team Area
                         </Button>{' '}
                     </Col>

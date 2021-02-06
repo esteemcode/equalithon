@@ -25,7 +25,7 @@ const CreateTeam = () => {
                 </Form.Group>
 
                 <Button href="" size="sm
-                " variant="light" className="text-dark select mb-2">Select</Button>
+                " variant="light" className="text-dark select mb-2 light-gray">Select</Button>
 
                 <Form.Group className="form-group">
                 <Form.Control required type="text" name="challenge" placeholder="Challenge selected: Challenge 2" />
@@ -36,7 +36,7 @@ const CreateTeam = () => {
                 </Form.Group>
 
                 <Button href="" size="sm
-                " variant="light" className="text-dark select mb-2">Select</Button>
+                " variant="light" className="text-dark select mb-2 light-gray">Select</Button>
 
                 <Form.Group className="form-group">
                     <Form.Control required type="text" name="teamLead" placeholder="Team lead: @Slack Handle Name" />
@@ -47,8 +47,8 @@ const CreateTeam = () => {
                 <Col></Col>
                 <Col>
                 <Row className="float-right">
-                <Button href="" size="sm" variant="light" className="text-dark mr-3 pl-4 pr-4 mb-2">Yes</Button>
-                <Button href="" size="sm" variant="light" className="text-dark pl-4 pr-4 mb-2">No</Button>
+                <Button href="" size="sm" variant="light" className="text-dark mr-3 pl-4 pr-4 mb-2 light-gray">Yes</Button>
+                <Button href="" size="sm" variant="light" className="text-dark pl-4 pr-4 mb-2 light-gray">No</Button>
                 </Row>
                 </Col>
 
@@ -62,7 +62,7 @@ const CreateTeam = () => {
                     <Col md={4}>
                 <Row className="float-right">
                 <Button href="" size="sm
-                " variant="light" className="text-dark mb-2">Select Skills</Button>
+                " variant="light" className="text-dark mb-2 light-gray">Select Skills</Button>
                 </Row>
 
                 <Row className="float-right">
