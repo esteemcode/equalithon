@@ -26,12 +26,12 @@ const RegistrationEndNavigation = () => {
                             </Link>
                             </ListGroup.Item>
                             <ListGroup.Item as="li" className="col-12 m-0 nav-list-item-w-hover-yellow mb-1 mt-1 border-top">
-                                <Link className="a-inherit">
+                                <Link to="/Participant-Registration" className="a-inherit">
                                     I want to mentor an Equalithon
                             </Link>
                             </ListGroup.Item>
                             <ListGroup.Item as="li" className="col-12 m-0 nav-list-item-w-hover-yellow mb-1 mt-1 border-top">
-                                <Link className="a-inherit">
+                                <Link to="/Participant-Registration" className="a-inherit">
                                     I am a community manager
                             </Link>
                             </ListGroup.Item>

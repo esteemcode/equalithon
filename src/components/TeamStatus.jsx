@@ -41,7 +41,7 @@ const TeamStatus = () => {
                         <Button href="/select-location" size="md" variant="cyan" className="cyan text-white team-select-button">Invite people</Button>
                     </Col>
                     <Col lg={{ span: 6}}>
-                        <Button href="/equalithon-selection" size="md" variant="warning" className="yellow text-white team-select-button">Validate people</Button>
+                        <Button href="/ValidateApplicant" size="md" variant="warning" className="yellow text-white team-select-button">Validate people</Button>
                     </Col>
                 </Row>
 
@@ -70,7 +70,7 @@ const TeamStatus = () => {
                         <Button href="/select-location" size="md" variant="cyan" className="cyan text-white team-select-button">Invite people</Button>
                     </Col>
                     <Col lg={{ span: 6}}>
-                        <Button href="/equalithon-selection" size="md" variant="warning" className="yellow text-white team-select-button">Validate people</Button>
+                        <Button href="/ValidateApplicant" size="md" variant="warning" className="yellow text-white team-select-button">Validate people</Button>
                     </Col>
                 </Row>
 

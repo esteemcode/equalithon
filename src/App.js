@@ -25,6 +25,7 @@ import CreateTeam from './components/CreateTeam';
 import TeamArea from './components/TeamArea';
 import YourEqualithons from './components/YourEqualithons';
 import TeamStatus from './components/TeamStatus';
+import ValidateApplicant from './components/ValidateApplicant';
 
 function App() {
   return (
@@ -41,7 +42,7 @@ function App() {
         <Route path="/equalithon-info" exact component={EqualithonInfo} />
         <Route path="/contact" exact component={ContactUs} />
         <Route path="/feedback" exact component={Feedback} />
-        <Route path="/group-registration" exact component={RegistrationGroup} />
+        <Route path="/registration-group" exact component={RegistrationGroup} />
         <Route path="/sponsorship" exact component={Sponsorship} />
         <Route path="/sponsorhome" exact component={SponsorHome} />
         <Route path="/dandiregistration" exact component={DAndIRegistration} />
@@ -54,6 +55,7 @@ function App() {
         <Route path="/TeamArea" exact component={TeamArea}/>
         <Route path="/YourEqualithons" exact component={YourEqualithons}/>
         <Route path="/TeamStatus" exact component={TeamStatus}/>
+        <Route path="/ValidateApplicant" exact component={ValidateApplicant}/>
       </Router>
     </div>
   );

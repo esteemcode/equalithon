@@ -47,6 +47,10 @@ body {
   background-color: #29CABE;
 }
 
+.cyan-form {
+  color: #29CABE;
+}
+
 .header-center {
   text-align: center;
 }
@@ -72,6 +76,10 @@ body {
 
 .home-button {
   width: 65%;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .home {

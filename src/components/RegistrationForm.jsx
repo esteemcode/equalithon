@@ -54,7 +54,7 @@ const RegistrationForm = props => {
  const emailNewMember = async (email) => {
             try {
                 const response = await fetch(`
-                https://v1.nocodeapi.com/josephineamos/mailchimp/cYRhtFLOTynxNLrh/members?list_id=5c5b621efb&email_address=${email}&status=subscribed`, {
+                https://v1.nocodeapi.com/essteem/mailchimp/zxMrzqvGwZRRtmfr/members?list_id=5c5b621efb&email_address=${email}&status=subscribed`, {
                     method: "post",
                     headers: {
                         "Content-Type": "application/json"
@@ -94,7 +94,7 @@ const RegistrationForm = props => {
                 ) : null}
                 <Row>
                     <Col>
-                        <Form.Label className="text-secondary form-label">Already signed up? <a className="text-secondary" href='/login'>Log in</a></Form.Label>
+                        <Form.Label className="text-secondary form-label">Already signed up? <a className="text-secondary" href='/signin'>Log in</a></Form.Label>
                     </Col>
                     <Col >
                         <Button href="" variant="warning" className="yellow text-dark signup-button" type="submit">SIGN UP</Button>

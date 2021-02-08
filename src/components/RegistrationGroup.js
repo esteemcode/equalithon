@@ -79,7 +79,7 @@ const RegistrationGroup = () => {
     const emailNewMember = async (email) => {
       try {
           const response = await fetch(`
-          https://v1.nocodeapi.com/josephineamos/mailchimp/cYRhtFLOTynxNLrh/members?list_id=5c5b621efb&email_address=${email}&status=subscribed`, {
+          https://v1.nocodeapi.com/essteem/mailchimp/zxMrzqvGwZRRtmfr/members?list_id=5c5b621efb&email_address=${email}&status=subscribed`, {
               method: "post",
               headers: {
                   "Content-Type": "application/json"
