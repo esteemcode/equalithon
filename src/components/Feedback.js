@@ -126,17 +126,18 @@ const Feedback = () => {
         <>
         <Navigation />
         <div className="container justify-content-center w-50">
+            <br />
             <form className="row justify-content-end align-self-center">
                 <div className="row w-100 justify-content-center">
                     {
-                        !formSubmitted ? (
+                        formSubmitted ? (
                             <div className="alert alert-danger" role="alert">
                                 Whoops! Something went wrong.
                             </div>)
                             : null
                     }
                     {
-                        !formError ? (
+                        formError ? (
                             <div className="alert alert-success" role="alert">
                                 Thank you. We apprieciate your feedback.
                             </div>
@@ -295,6 +296,7 @@ const Feedback = () => {
                     <button type="button" className="btn btn-primary align-self-end cyan border-0 cyan-hover" onClick={() => handleSubmit()}>Submit Feedback</button>
                 </div>
             </form>
+            <br />
         </div>
         </>
     )

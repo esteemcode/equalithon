@@ -89,6 +89,10 @@ body {
   margin-left: 20%;
 }
 
+.inline {
+  display: inline;
+}
+
 .team-selection {
   width: 90px;
   margin-top: 8%;

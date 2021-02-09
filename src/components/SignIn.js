@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navigation from './landingPage/navigation/Navigation';
-import {Row, Col, Form, Button} from 'react-bootstrap';
+import {Row, Col, Form, Button, Container} from 'react-bootstrap';
 import {Redirect} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -29,23 +29,6 @@ const SignIn = props => {
         });
     }
 
-    // const auth = async (json) => {
-    //     let arr = await json.data
-    //     arr.map((each) => {
-    //         if (email === each.Email && password === each.Password) {
-    //             console.log('it worked')
-    //             setData({
-    //                 home: true
-    //             });
-    //         } else {
-    //             console.log('it did not work')
-    //             setData({
-    //                 register: true
-    //             });
-    //         }
-    //     })
-    // }
-
     const onSubmitHandler = async (e) => {
         e.preventDefault();
         try {
@@ -67,7 +50,6 @@ const SignIn = props => {
         }
 
     }
-    console.log('data', data)
 
     return (
         <>
@@ -84,7 +66,7 @@ const SignIn = props => {
                     <Col >
                         <Button href="" variant="warning" className="yellow text-dark signup-button" type="submit">SIGN IN</Button>
                     </Col>
-                    {data.register ? (<Redirect to='/' />) : (<div />)}
+                    {data.register ? (<Container><p className='inline'>Either email or password are incorrect. Please try again or</p><a className="cyan-text inline" href='/'> sign up.</a></Container>) : (<div />)}
                     {data.home ? (<Redirect to='/home' />) : (<div />)}
                 </Row>
             </Form>

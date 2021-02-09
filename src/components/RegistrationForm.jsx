@@ -93,10 +93,10 @@ const RegistrationForm = props => {
                     <span className="text-danger small">Passwords don't match.</span>
                 ) : null}
                 <Row>
-                    <Col>
-                        <Form.Label className="text-secondary form-label">Already signed up? <a className="text-secondary" href='/signin'>Log in</a></Form.Label>
+                    <Col sm={7}>
+                        <Form.Label className="text-secondary form-label">Already signed up? <a className="cyan-text" href='/signin'>Log in</a></Form.Label>
                     </Col>
-                    <Col >
+                    <Col sm={5}>
                         <Button href="" variant="warning" className="yellow text-dark signup-button" type="submit">SIGN UP</Button>
                     </Col>
                     {data.redirect ? (<Redirect to='/registrationendnavigation' />) : (<div />)}

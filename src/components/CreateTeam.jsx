@@ -66,7 +66,7 @@ const CreateTeam = () => {
                 </Row>
 
                 <Row className="float-right">
-                <Button href="" size="md" variant="warning" className="yellow text-dark mb-2">Create team</Button>
+                <Button href="/teamArea" size="md" variant="warning" className="yellow text-dark mb-2">Create team</Button>
                 </Row>
                 </Col>
                 </Row>

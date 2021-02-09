@@ -37,7 +37,7 @@ const YourEqualithons = () => {
                 </Form.Group>
                 <Row className="text-center mb-2">
                     <Col lg={{ span: 6}}>
-                        <Button href="/equalithon-selection" size="md" variant="light" className="medium-gray text-white team-select-button">Learn more</Button>
+                        <Button href="/equalithon-info" size="md" variant="light" className="medium-gray text-white team-select-button">Learn more</Button>
                     </Col>
                     <Col lg={{ span: 6}}>
                         <Button href="/select-location" size="md" variant="cyan" className="cyan text-white team-select-button">Check your team</Button>
@@ -64,7 +64,7 @@ const YourEqualithons = () => {
                 </Form.Group>
                 <Row className="text-center mb-2">
                     <Col lg={{ span: 6}}>
-                        <Button href="/equalithon-selection" size="md" variant="light" className="medium-gray text-white team-select-button">Learn more</Button>
+                        <Button href="/equalithon-info" size="md" variant="light" className="medium-gray text-white team-select-button">Learn more</Button>
                     </Col>
                     <Col lg={{ span: 6}}>
                         <Button href="/select-location" size="md" variant="cyan" className="cyan text-white team-select-button">Check your team</Button>

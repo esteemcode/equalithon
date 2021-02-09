@@ -38,7 +38,7 @@ const JoinTeam = () => {
         <>
             <Navigation />
             <Button href="/home" size="md" variant="info" className="cyan text-white home">Home</Button>
-            { teamButton ? (<div />) : (<Button href="" size="md" variant="info" className="cyan text-white team-selection">Team Area</Button>)}
+            { teamButton ? (<div />) : (<Button href="/teamArea" size="md" variant="info" className="cyan text-white team-selection">Team Area</Button>)}
             <Form className="registrationForm">
             <Container className="cyan form-header text-white p-3 mb-3">
           <h4> You Are Registered!</h4>
