@@ -130,7 +130,7 @@ const CompanyRating = () => {
         </Card>
 
         <Button
-          href="./group-registration"
+          href="./registration-group"
           variant="warning"
           className="next yellow text-dark float-right mt-3"
           type="submit"
@@ -138,7 +138,7 @@ const CompanyRating = () => {
           Next
         </Button>
         <Button
-          href="./group-registration"
+          href="./registration-group"
           className="btn btn-light text-dark mt-3"
           type="submit"
         >

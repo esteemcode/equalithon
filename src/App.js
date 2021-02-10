@@ -19,6 +19,13 @@ import CompanyRating from './components/CompanyRating';
 import ParticipantRegistration from './components/ParticipantRegistration';
 import Slack from './components/Slack';
 import Profile from './components/Profile';
+import JoinTeam from './components/JoinTeam';
+import TeamAcknowledgement from './components/TeamAcknowledgement';
+import CreateTeam from './components/CreateTeam';
+import TeamArea from './components/TeamArea';
+import YourEqualithons from './components/YourEqualithons';
+import TeamStatus from './components/TeamStatus';
+import ValidateApplicant from './components/ValidateApplicant';
 
 function App() {
   return (
@@ -35,13 +42,20 @@ function App() {
         <Route path="/equalithon-info" exact component={EqualithonInfo} />
         <Route path="/contact" exact component={ContactUs} />
         <Route path="/feedback" exact component={Feedback} />
-        <Route path="/group-registration" exact component={RegistrationGroup} />
+        <Route path="/registration-group" exact component={RegistrationGroup} />
         <Route path="/sponsorship" exact component={Sponsorship} />
         <Route path="/sponsorhome" exact component={SponsorHome} />
         <Route path="/dandiregistration" exact component={DAndIRegistration} />
         <Route path="/company-rating" exact component={CompanyRating} />
         <Route path="/Participant-Registration" exact component={ParticipantRegistration} />
         <Route path="/profile" exact component={Profile} />
+        <Route path="/joinTeam" exact component={JoinTeam} />
+        <Route path="/TeamAcknowledgement" exact component={TeamAcknowledgement}/>
+        <Route path="/CreateTeam" exact component={CreateTeam}/>
+        <Route path="/TeamArea" exact component={TeamArea}/>
+        <Route path="/YourEqualithons" exact component={YourEqualithons}/>
+        <Route path="/TeamStatus" exact component={TeamStatus}/>
+        <Route path="/ValidateApplicant" exact component={ValidateApplicant}/>
       </Router>
     </div>
   );

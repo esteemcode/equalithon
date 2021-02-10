@@ -2,7 +2,6 @@ import React from 'react';
 import Navigation from './landingPage/navigation/Navigation';
 import Container from 'react-bootstrap/Container';
 import {Row,Col} from 'react-bootstrap';
-// import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './landingPage/home.css';
 

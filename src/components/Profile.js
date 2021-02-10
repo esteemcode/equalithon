@@ -14,10 +14,14 @@ const Profile = () => {
     slackHandle: "",
     linkedIn: "",
     currentJob: "",
-
+    mainSpecialty: "",
+    experience: "",
+    company: "",
+    numberOfEmployees: "",
+    sectorIndustry: ""
 })
 
-const { firstName, lastName, email, newPassword, oldPassword, confirmNewPassword } = data;
+// const { firstName, lastName, email, newPassword, oldPassword, confirmNewPassword, slackHandle, linkedIn, currentJob, mainSpecialty, experience, company, numberOfEmployees, sectorIndustry } = data;
 
 const onChangeHandler = e => {
     setData({
@@ -102,51 +106,40 @@ const onChangeHandler = e => {
 
         <Card className="mt-3">
           <Card.Header>Work Information</Card.Header>
-
           <Card.Body>
           <Form>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" name="firstName" placeholder="First Name" onChange={onChangeHandler} />
+                    <Form.Control required type="text" name="linkedIn" placeholder="LinkedIn Profile URL" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" name="lastName" placeholder="Last Name" onChange={onChangeHandler} />
+                    <Form.Control required type="text" name="currentJob" placeholder="Current Job or Desired Job Title" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="email" placeholder="E-mail" name="email" onChange={onChangeHandler} />
+                    <Form.Control required type="text" placeholder="Main Specialty" name="mainSpecialty" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="slackHandle" placeholder="Slack Handle" name="slackHandle" onChange={onChangeHandler} />
+                    <Form.Control required type="text" placeholder="Amount of Years/Projects with Experience" name="experience" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="oldPassword" minLength="6" maxLength="8" size="8" placeholder="Old Password" name="oldPassword" onChange={onChangeHandler} />
+                    <Form.Control required type="text" placeholder="Company or Last Employer" name="company" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="newPassword" minLength="6" maxLength="8" size="8" placeholder="New Password" name="newPassword" onChange={onChangeHandler} />
+                    <Form.Control required type="text" placeholder="Number of Employees" name="numberOfEmployees" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="confirmNewPassword" minLength="6" maxLength="8" size="8" placeholder="Confirm password" name="confirmNewPassword" onChange={onChangeHandler} />
+                    <Form.Control required type="text" placeholder="Sector or Industry" name="sectorIndustry" onChange={onChangeHandler} />
                 </Form.Group>
-                {data.password !== data.confirmPassword ? (
-                    <span className="text-danger small">Passwords don't match.</span>
-                ) : null}
                 </Form>
           </Card.Body>
         </Card>
-
+        
         <Button
-          href="./group-registration"
+          href="profile"
           variant="warning"
           className="next yellow text-dark float-right mt-3"
           type="submit"
         >
-          Next
-        </Button>
-        <Button
-          href="./group-registration"
-          className="btn btn-light text-dark mt-3"
-          type="submit"
-        >
-          Skip
+          Save Changes
         </Button>
       </div>
       </div>

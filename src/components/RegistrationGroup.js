@@ -1,9 +1,9 @@
 import { React, useState } from "react";
 import Navigation from "./landingPage/navigation/Navigation";
 import { Container } from "react-bootstrap";
+import {Link} from 'react-router-dom'
 
 const RegistrationGroup = () => {
-  const [countForm, setCountForm] = useState(1);
   const [data, setData] = useState({
     ifirstName1: "",
     ilastName1: "",
@@ -41,18 +41,6 @@ const RegistrationGroup = () => {
     });
   };
 
-  const onAddPeerClick = () => {
-    let newCountForm = countForm + 1;
-
-    setCountForm(newCountForm);
-  };
-
-  const onDeleteClick = () => {
-    let count = countForm - 1;
-
-    setCountForm(count);
-  };
-
   const sendData = async (e) => {
     e.preventDefault();
 
@@ -84,25 +72,47 @@ const RegistrationGroup = () => {
       );
       const json = await response.json();
       console.log("Success:", JSON.stringify(json));
-    } catch (error) {}
-    document.getElementById("contact-form").reset();
+    } catch (error) {
+      console.error("Error:", error);
+    }
+
+    const emailNewMember = async (email) => {
+      try {
+          const response = await fetch(`
+          https://v1.nocodeapi.com/essteem/mailchimp/zxMrzqvGwZRRtmfr/members?list_id=5c5b621efb&email_address=${email}&status=subscribed`, {
+              method: "post",
+              headers: {
+                  "Content-Type": "application/json"
+              }
+          });
+          const json = await response.json();
+          console.log("Success:", JSON.stringify(json));
+      } catch (error) {
+          console.error("Error:", error);
+      }
+  }
+
+      emailNewMember(iemail1);
+      emailNewMember(iemail2);
+      emailNewMember(iemail3);
+
+  document.getElementById("contact-form").reset();
   };
 
   return (
     <div>
       <Navigation />
-      <form id="contact-form" className="registrationForm" onSubmit={sendData}>
-        <Container className="cyan form-header text-white p-2 mb-3">
+      <form id="contact-form" className="registrationForm pb-6 mb-5" onSubmit={sendData}>
+        <Container className="cyan form-header text-white p-3 pt-3 mb-1">
           <h5> Congrats! You are registered.</h5>
           <p> Invite 3 peers: the more to help, the merrier!</p>
         </Container>
 
-        <p className="mb-2 ml-2">
+        <p className="mx-1 p-1">
           Your contacts will receive an email with your invite; ie "Essteem does
           cool things for women in tech! Thought you'd be interested."
         </p>
 
-        {countForm > 0 && (
           <div>
             <div className="row">
               <div className="col-6">
@@ -141,9 +151,6 @@ const RegistrationGroup = () => {
               onChange={handleInput}
             ></input>
           </div>
-        )}
-
-        {countForm > 1 && (
           <div>
             <div className="row">
               <div className="col-6">
@@ -151,7 +158,7 @@ const RegistrationGroup = () => {
                   type="text"
                   name="ifirstName2"
                   className="form-control mb-2"
-                  placeholder="*First Name"
+                  placeholder="First Name"
                   onChange={handleInput}
                 ></input>
               </div>
@@ -160,7 +167,7 @@ const RegistrationGroup = () => {
                   type="text"
                   name="ilastName2"
                   className="form-control mb-2"
-                  placeholder="*Last Name"
+                  placeholder="Last Name"
                   onChange={handleInput}
                 ></input>
               </div>
@@ -170,7 +177,7 @@ const RegistrationGroup = () => {
               type="email"
               name="iemail2"
               className="form-control mb-2"
-              placeholder="*E-mail"
+              placeholder="E-mail"
               onChange={handleInput}
             ></input>
 
@@ -178,13 +185,11 @@ const RegistrationGroup = () => {
               type="text"
               name="imessage2"
               className="form-control mb-4"
-              placeholder="*Your invite message"
+              placeholder="Your invite message"
               onChange={handleInput}
             ></input>
           </div>
-        )}
 
-        {countForm > 2 && (
           <div>
             <div className="row">
               <div className="col-6">
@@ -223,26 +228,13 @@ const RegistrationGroup = () => {
               onChange={handleInput}
             ></input>
           </div>
-        )}
 
-        <button
-          onClick={onAddPeerClick}
-          disabled={countForm === 3 ? true : false}
-          className="btn cyan mr-2"
-        >
-          Add Contact
-        </button>
-        <button
-          onClick={onDeleteClick}
-          disabled={countForm > 1 ? false : true}
-          className="btn cyan"
-        >
-          Delete Contact
-        </button>
+        <Link to="/joinTeam">
         <button className="btn btn-warning float-right ">
           Send and Check out teams!
-        </button>
-        <button className="btn float-right border mr-2">Skip</button>
+        </button></Link>
+        <Link to="/joinTeam">
+        <button className="btn float-right border mr-2">Skip</button></Link>
       </form>
     </div>
   );

@@ -32,6 +32,7 @@ body {
 
 .registrationForm {
   padding-top: 20px;
+  padding-bottom: 20px;
   width: 40%;
   margin: auto;
 }
@@ -46,12 +47,39 @@ body {
   background-color: #29CABE;
 }
 
+.cyan-form {
+  color: #29CABE;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.cyan-text {
+  color: #29CABE;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .yellow {
   background-color: #FFD966;
 }
 
+.light-gray {
+  background-color: rgb(239, 239, 239)
+}
+
+.medium-gray {
+  background-color: rgb(150, 149, 149)
+}
+
 .home-button {
   width: 65%;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .home {
@@ -61,8 +89,24 @@ body {
   margin-left: 20%;
 }
 
+.inline {
+  display: inline;
+}
+
+.team-selection {
+  width: 90px;
+  margin-top: 8%;
+  position: absolute;
+  margin-left: 20%;
+}
+
 .team-select-button {
-  width: 95%;
+  width: 100%;
+}
+
+.select {
+  float: right;
+  width: 40%;
 }
 
 .next {
@@ -82,4 +126,8 @@ body {
 
 .cyan-hover:hover {
   background-color: #29CABE;
+}
+
+.button-center {
+  text-align: center;
 }
