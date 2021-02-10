@@ -6,15 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const RegistrationForm = props => {
     const [ data, setData ] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
+        pfirstname: "",
+        plastname: "",
+        pemail: "",
+        ppassword: "",
+        pslackhandle: "",
         confirmPassword: "",
         redirect: false
     })
 
-    const { firstName, lastName, email, password } = data;
+    const { pfirstname, plastname, pemail, ppassword } = data;
 
     const onChangeHandler = e => {
         setData({
@@ -27,17 +28,17 @@ const RegistrationForm = props => {
         e.preventDefault();
         try {
             const response = await fetch(
-                "https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=registration",
+                "https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=profile",
             {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify([[
-                    firstName,
-                    lastName,
-                    email,
-                    password,
+                    pfirstname,
+                    plastname,
+                    pemail,
+                    ppassword,
                     new Date().toLocaleString()
                 ]])
             });
@@ -51,10 +52,10 @@ const RegistrationForm = props => {
             console.error("Error:", error);
         }
 
- const emailNewMember = async (email) => {
+ const emailNewMember = async (pemail) => {
             try {
                 const response = await fetch(`
-                https://v1.nocodeapi.com/essteem/mailchimp/zxMrzqvGwZRRtmfr/members?list_id=5c5b621efb&email_address=${email}&status=subscribed`, {
+                https://v1.nocodeapi.com/essteem/mailchimp/zxMrzqvGwZRRtmfr/members?list_id=5c5b621efb&email_address=${pemail}&status=subscribed`, {
                     method: "post",
                     headers: {
                         "Content-Type": "application/json"
@@ -66,7 +67,7 @@ const RegistrationForm = props => {
                 console.error("Error:", error);
             }
         }
-        emailNewMember(email);
+        emailNewMember(pemail);
     }
 
     return (
@@ -75,21 +76,21 @@ const RegistrationForm = props => {
             <Form className="registrationForm" onSubmit={onSubmitHandler}>
                 <h5 className="cyan form-header text-white p-3 mb-3">Sign up</h5>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" name="firstName" placeholder="First Name" onChange={onChangeHandler} />
+                    <Form.Control required type="text" name="pfirstname" placeholder="First Name" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" name="lastName" placeholder="Last Name" onChange={onChangeHandler} />
+                    <Form.Control required type="text" name="plastname" placeholder="Last Name" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="email" placeholder="E-mail" name="email" onChange={onChangeHandler} />
+                    <Form.Control required type="email" placeholder="E-mail" name="pemail" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="password" minLength="6" maxLength="8" size="8" placeholder="Password" name="password" onChange={onChangeHandler} />
+                    <Form.Control required type="password" minLength="6" maxLength="8" size="8" placeholder="Password" name="ppassword" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
                     <Form.Control required type="password" minLength="6" maxLength="8" size="8" placeholder="Confirm password" name="confirmPassword" onChange={onChangeHandler} />
                 </Form.Group>
-                {data.password !== data.confirmPassword ? (
+                {data.ppassword !== data.confirmPassword ? (
                     <span className="text-danger small">Passwords don't match.</span>
                 ) : null}
                 <Row>

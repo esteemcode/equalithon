@@ -14,13 +14,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SignIn = props => {
     const [ data, setData ] = useState({
-        email: "",
-        password: "",
+        pemail: "",
+        ppassword: "",
         home: false,
         register: false,
     })
 
-    const {email, password } = data;
+    const {pemail, ppassword } = data;
 
     const onChangeHandler = e => {
         setData({
@@ -33,7 +33,7 @@ const SignIn = props => {
         e.preventDefault();
         try {
             const response = await fetch(
-                "https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=registration",
+                "https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=profile",
             {
                 method: "get",
                 headers: {
@@ -42,7 +42,8 @@ const SignIn = props => {
             });
             const json = await response.json();
             const auth = json.data.some((each) => {
-                return (email === each.Email && password === each.Password)})
+                console.log('email: ', each.pemail, 'password: ', each.ppassword)
+                return (pemail === each.pemail && ppassword === each.ppassword)})
             auth ? (setData({ home: true, register: false})) : (setData({register: true}))
             e.target.reset();
         } catch (error) {
@@ -57,16 +58,16 @@ const SignIn = props => {
             <Form className="registrationForm" onSubmit={onSubmitHandler}>
                 <h5 className="cyan form-header text-white p-3 mb-3">Sign up</h5>
                 <Form.Group className="form-group">
-                    <Form.Control required type="email" placeholder="E-mail" name="email" onChange={onChangeHandler} />
+                    <Form.Control required type="email" placeholder="E-mail" name="pemail" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="password" minLength="6" maxLength="8" size="8" placeholder="Password" name="password" onChange={onChangeHandler} />
+                    <Form.Control required type="password" minLength="6" maxLength="8" size="8" placeholder="Password" name="ppassword" onChange={onChangeHandler} />
                 </Form.Group>
                 <Row>
                     <Col >
                         <Button href="" variant="warning" className="yellow text-dark signup-button" type="submit">SIGN IN</Button>
                     </Col>
-                    {data.register ? (<Container><p className='inline'>Either email or password are incorrect. Please try again or</p><a className="cyan-text inline" href='/'> sign up.</a></Container>) : (<div />)}
+                    {data.register ? (<Container className="mt-2"><p className='inline'>Either email or password are incorrect. Please try again or</p><a className="cyan-text inline" href='/'> sign up.</a></Container>) : (<div />)}
                     {data.home ? (<Redirect to='/home' />) : (<div />)}
                 </Row>
             </Form>
