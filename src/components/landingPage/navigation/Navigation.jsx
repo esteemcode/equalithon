@@ -20,6 +20,8 @@ const Navigation = () => {
                 <Nav>
                 <Nav.Link href="profile" className="text-dark">Profile</Nav.Link>
                 <Nav.Link href="contact" className="text-dark">Contact Us</Nav.Link>
+                <Nav.Link href="profile" className="text-dark">FAQ</Nav.Link>
+                <Nav.Link href="contact" className="text-dark">Sign Out</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
