@@ -31,6 +31,13 @@ const Home = () => {
                         </Button>{' '}
                     </Col>
                 </Row>
+                <Row className="text-center">
+                    <Col lg={{ span: 6, offset: 3 }}>
+                        <Button href="/YourAcclaim" className="home-button medium-gray" variant="light" size="lg">
+                            Your Badges
+                        </Button>{' '}
+                    </Col>
+                </Row>
             </Container>
         </>
 
