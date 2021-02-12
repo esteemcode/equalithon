@@ -3,19 +3,6 @@ import Navigation from './landingPage/navigation/Navigation';
 import {Row,Col,Form,Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-/* THIS
-IS
-FOR
-A
-SPECIFICALLY
-CHOSEN
-TEAM
-AFTER
-YOU
-CLICK
-LEARN
-MORE */
-
 const EqualithonInfo = () => {
 
     return (

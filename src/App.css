@@ -47,6 +47,10 @@ body {
   background-color: #29CABE;
 }
 
+.orange {
+  background-color: orange;
+}
+
 .cyan-form {
   color: #29CABE;
 }
@@ -130,4 +134,16 @@ body {
 
 .button-center {
   text-align: center;
+}
+
+.block {
+  height: 300;
+  background-color: white;
+  border-color: gray;
+  display: inline-block;
+  color: gray;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }

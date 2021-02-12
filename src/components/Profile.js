@@ -5,7 +5,7 @@ import { Card, Button, Row, Col, Form } from "react-bootstrap";
 
 const Profile = () => {
   const [ data, setData ] = useState({
-    firstName: "First Name",
+    firstName: "",
     lastName: "",
     email: "",
     newPassword: "",
@@ -21,8 +21,6 @@ const Profile = () => {
     sectorIndustry: ""
 })
 
-// const { firstName, lastName, email, newPassword, oldPassword, confirmNewPassword, slackHandle, linkedIn, currentJob, mainSpecialty, experience, company, numberOfEmployees, sectorIndustry } = data;
-
 const onChangeHandler = e => {
     setData({
         ...data,
@@ -31,7 +29,7 @@ const onChangeHandler = e => {
 }
 
   return (
-    <div>
+    <>
       <Navigation />
       <div className="registrationForm mb-4">
       <Row className="text-center" >
@@ -118,7 +116,7 @@ const onChangeHandler = e => {
                     <Form.Control required type="text" placeholder="Main Specialty" name="mainSpecialty" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" placeholder="Amount of Years/Projects with Experience" name="experience" onChange={onChangeHandler} />
+                    <Form.Control required type="text" placeholder="Years of Experience" name="experience" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
                     <Form.Control required type="text" placeholder="Company or Last Employer" name="company" onChange={onChangeHandler} />
@@ -132,7 +130,7 @@ const onChangeHandler = e => {
                 </Form>
           </Card.Body>
         </Card>
-        
+
         <Button
           href="profile"
           variant="warning"
@@ -142,7 +140,8 @@ const onChangeHandler = e => {
           Save Changes
         </Button>
       </div>
-      </div>
+      <br />
+      </>
   );
 };
 
