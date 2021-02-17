@@ -27,7 +27,7 @@ import YourEqualithons from './components/YourEqualithons';
 import TeamStatus from './components/TeamStatus';
 import ValidateApplicant from './components/ValidateApplicant';
 import YourAcclaim from './components/YourAcclaim'
-import DenyParticipant from './components/DenyParticipant'
+import DenyApplicant from './components/DenyApplicant'
 
 
 function App() {
@@ -60,7 +60,7 @@ function App() {
         <Route path="/TeamStatus" exact component={TeamStatus}/>
         <Route path="/ValidateApplicant" exact component={ValidateApplicant}/>
         <Route path="/YourAcclaim" exact component={YourAcclaim}/>
-        <Route path="/DenyParticipant" exact component={DenyParticipant}/>
+        <Route path="/DenyApplicant" exact component={DenyApplicant}/>
       </Router>
     </div>
   );

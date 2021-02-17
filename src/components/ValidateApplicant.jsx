@@ -48,7 +48,7 @@ const ValidateApplicant = () => {
 
                 <Row className="text-center mb-2">
                     <Col lg={{ span: 6}}>
-                        <Button href="/DenyParticipant" size="md" variant="light" className="medium-gray text-white team-select-button">Deny</Button>
+                        <Button href="/DenyApplicant" size="md" variant="light" className="medium-gray text-white team-select-button">Deny</Button>
                     </Col>
                     <Col lg={{ span: 6}}>
                         <Button href="/equalithon-selection" size="md" variant="warning" className="yellow text-white team-select-button">Validate Applicant</Button>
@@ -74,7 +74,7 @@ const ValidateApplicant = () => {
 
                 <Row className="text-center mb-2">
                     <Col lg={{ span: 6}}>
-                        <Button href="/DenyParticipant" size="md" variant="light" className="medium-gray text-white team-select-button">Deny</Button>
+                        <Button href="/DenyApplicant" size="md" variant="light" className="medium-gray text-white team-select-button">Deny</Button>
                     </Col>
                     <Col lg={{ span: 6}}>
                         <Button href="/equalithon-selection" size="md" variant="warning" className="yellow text-white team-select-button">Validate Applicant</Button>
@@ -104,7 +104,7 @@ const ValidateApplicant = () => {
 
                 <Row className="text-center mb-2">
                     <Col lg={{ span: 6}}>
-                        <Button href="/DenyParticipant" size="md" variant="light" className="medium-gray text-white team-select-button">Deny</Button>
+                        <Button href="/DenyApplicant" size="md" variant="light" className="medium-gray text-white team-select-button">Deny</Button>
                     </Col>
                     <Col lg={{ span: 6}}>
                         <Button href="/equalithon-selection" size="md" variant="warning" className="yellow text-white team-select-button">Validate Applicant</Button>

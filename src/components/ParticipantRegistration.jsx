@@ -4,13 +4,14 @@ import Navigation from './landingPage/navigation/Navigation.jsx';
 
 const ParticipantRegistration = () => {
 
+    //this does not post to the correct row or column in the database
     const onSubmitHandler = async (e) => {
         try {
             const response = await fetch(
                 "https://v1.nocodeapi.com/essteem/google_sheets/IgoNtzYsdlMmRjbd?tabId=profile",
             {
-                method: "post",
-                body: JSON.stringify({"row_id":2,"column_id":7, "preasonforjoining":`${e}`}),
+                method: "put",
+                body: JSON.stringify({"row_id":22, "preasonforjoining":`${e}`}),
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -39,9 +40,9 @@ const ParticipantRegistration = () => {
                     </Row>
                     <Row className="w-100 m-0">
                         <ListGroup as="ul" className="w-100 m-0">
-                            <ListGroup.Item as="li" className="col-12 m-0 nav-list-item-w-hover-yellow mb-1 mt-1 border-top" onClick={() => onSubmitHandler("I want to participate in an Equalithon")}>
-                                <Link to="/Participant-Registration" className="a-inherit">
-                                    I want to participate in an Equalithon
+                            <ListGroup.Item as="li" className="col-12 m-0 nav-list-item-w-hover-yellow mb-1 mt-1 border-top" onClick={() => onSubmitHandler("Hack in Equalithon")}>
+                                <Link to="/home" className="a-inherit">
+                                    Hack in Equalithons
                                 </Link>
                                 </ListGroup.Item>
                                 <ListGroup.Item as="li" className="col-12 m-0 nav-list-item-w-hover-yellow mb-1 mt-1 border-top" onClick={() => onSubmitHandler("Boost my career")}>

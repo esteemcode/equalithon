@@ -3,7 +3,7 @@ import Navigation from './landingPage/navigation/Navigation';
 import {Row,Form,Col,Button,Container} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const DenyParticipant = () => {
+const DenyApplicant = () => {
 
     return (
         <>
@@ -34,4 +34,4 @@ const DenyParticipant = () => {
     )
 }
 
-export default DenyParticipant;
+export default DenyApplicant;

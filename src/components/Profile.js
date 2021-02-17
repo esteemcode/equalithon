@@ -32,14 +32,14 @@ const onChangeHandler = e => {
     <>
       <Navigation />
       <div className="registrationForm mb-4">
-      <Row className="text-center" >
-        <Col sm={9}>
-        <div className="cyan form-header text-center text-white p-3 mb-2">
+      <Row>
+        <Col sm={9} className="pr-1">
+        <div className="cyan text-center text-white p-3">
           <h5>Profile Information</h5>
         </div>
         </Col>
-        <Col sm={3}>
-        <div className="yellow form-header text-white text-center p-3 mb-2">
+        <Col sm={3} className="pl-1">
+        <div className="yellow text-white text-center p-3">
           <h5>Edit</h5>
         </div>
         </Col>
