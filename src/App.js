@@ -62,7 +62,7 @@ function App() {
         <Route path="/ValidateApplicant" exact component={ValidateApplicant}/>
         <Route path="/YourAcclaim" exact component={YourAcclaim}/>
         <Route path="/DenyApplicant" exact component={DenyApplicant}/>
-        <Route path="/denyapplicanttwo" exact component={DenyApplicantTwo}/>
+        <Route path="/DenyApplicantTwo" exact component={DenyApplicantTwo}/>
       </Router>
     </div>
   );

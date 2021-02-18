@@ -26,7 +26,7 @@ const DenyApplicant = () => {
                         <Row className="text-center mt-2">
                           <Col lg={{ span: 6}}></Col>
                           <Col lg={{ span: 6}}>
-                        <Button href="/createteam" size="md" variant="warning" className="yellow text-dark team-select-button mx-auto">I agree</Button>
+                        <Button href="/DenyApplicantTwo" size="md" variant="warning" className="yellow text-dark team-select-button mx-auto">I agree</Button>
                         </Col>
                         </Row>
             </Form>
