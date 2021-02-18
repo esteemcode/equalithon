@@ -28,6 +28,7 @@ import TeamStatus from './components/TeamStatus';
 import ValidateApplicant from './components/ValidateApplicant';
 import YourAcclaim from './components/YourAcclaim'
 import DenyApplicant from './components/DenyApplicant'
+import DenyApplicantTwo from './components/DenyApplicantTwo';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
         <Route path="/ValidateApplicant" exact component={ValidateApplicant}/>
         <Route path="/YourAcclaim" exact component={YourAcclaim}/>
         <Route path="/DenyApplicant" exact component={DenyApplicant}/>
+        <Route path="/denyapplicanttwo" exact component={DenyApplicantTwo}/>
       </Router>
     </div>
   );

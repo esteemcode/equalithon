@@ -147,3 +147,35 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.deny-send {
+  width: 11.9vw;
+  background-color: #FFD966;
+}
+
+.deny-cancel {
+  width: 26vw;
+}
+
+.orange {
+  background-color: #F69900;
+}
+
+.justify-content {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.white {
+  color: white;
+}
+
+.light-black {
+  color: black;
+}
+
+.font-light-gray {
+  color: #999999;
+}
+
