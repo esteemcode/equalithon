@@ -3,14 +3,6 @@ import Navigation from './landingPage/navigation/Navigation';
 import {Row,Col,Form,Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-/* THIS
-LISTS
-ALL
-ACTIVE
-EQUALITHONS
-TO
-JOIN */
-
 class EqualithonSelection extends Component {
     constructor() {
         super();
@@ -77,6 +69,7 @@ class EqualithonSelection extends Component {
                         <Button href="/select-location" size="lg" variant="warning" className="yellow text-dark team-select-button mx-auto">Participate</Button>
                     </Col>
                 </Row>
+                <br></br>
                 </div>))) : (<div />)}
             </Form>
         </>

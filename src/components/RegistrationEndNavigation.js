@@ -10,7 +10,7 @@ const RegistrationEndNavigation = () => {
         <Container className="w-40">
             <Row className="justify-content-md-center">
                 <Col lg={6} md={6} sm={6} xs={12}>
-                    <Row className="cyan form-header text-white pt-1 pb-1 col-12 mt-0 ml-0 mr-0 mb-3">
+                    <Row className="cyan form-header text-white pt-1 pb-1 col-12 mt-0 ml-0 mr-0 mb-2">
                         <Row className="m-0 col-12 pl-0 pr-0 pt-2 pb-0">
                             <h4>Thanks!</h4>
                         </Row>

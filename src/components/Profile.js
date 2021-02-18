@@ -5,7 +5,7 @@ import { Card, Button, Row, Col, Form } from "react-bootstrap";
 
 const Profile = () => {
   const [ data, setData ] = useState({
-    firstName: "First Name",
+    firstName: "",
     lastName: "",
     email: "",
     newPassword: "",
@@ -21,8 +21,6 @@ const Profile = () => {
     sectorIndustry: ""
 })
 
-// const { firstName, lastName, email, newPassword, oldPassword, confirmNewPassword, slackHandle, linkedIn, currentJob, mainSpecialty, experience, company, numberOfEmployees, sectorIndustry } = data;
-
 const onChangeHandler = e => {
     setData({
         ...data,
@@ -31,17 +29,17 @@ const onChangeHandler = e => {
 }
 
   return (
-    <div>
+    <>
       <Navigation />
       <div className="registrationForm mb-4">
-      <Row className="text-center" >
-        <Col sm={9}>
-        <div className="cyan form-header text-center text-white p-3 mb-2">
+      <Row>
+        <Col sm={9} className="pr-1">
+        <div className="cyan text-center text-white p-3">
           <h5>Profile Information</h5>
         </div>
         </Col>
-        <Col sm={3}>
-        <div className="yellow form-header text-white text-center p-3 mb-2">
+        <Col sm={3} className="pl-1">
+        <div className="yellow text-white text-center p-3">
           <h5>Edit</h5>
         </div>
         </Col>
@@ -118,7 +116,7 @@ const onChangeHandler = e => {
                     <Form.Control required type="text" placeholder="Main Specialty" name="mainSpecialty" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Form.Control required type="text" placeholder="Amount of Years/Projects with Experience" name="experience" onChange={onChangeHandler} />
+                    <Form.Control required type="text" placeholder="Years of Experience" name="experience" onChange={onChangeHandler} />
                 </Form.Group>
                 <Form.Group className="form-group">
                     <Form.Control required type="text" placeholder="Company or Last Employer" name="company" onChange={onChangeHandler} />
@@ -132,7 +130,7 @@ const onChangeHandler = e => {
                 </Form>
           </Card.Body>
         </Card>
-        
+
         <Button
           href="profile"
           variant="warning"
@@ -142,7 +140,8 @@ const onChangeHandler = e => {
           Save Changes
         </Button>
       </div>
-      </div>
+      <br />
+      </>
   );
 };
 

@@ -31,6 +31,10 @@ const Home = () => {
                         </Button>{' '}
                     </Col>
                 </Row>
+                <Row className="text-center">
+                    <Col lg={{ span: 6, offset: 3 }}>
+                        <Button href="/YourAcclaim" className="home-button medium-gray" variant="light" size="lg">
+                            Your Badges
                 <Row className="text-center mb-1">
                     <Col lg={{ span: 6, offset: 3 }}>
                         <Button href="/slack" className="home-button light-gray font-light-gray" variant="light" size="lg">
