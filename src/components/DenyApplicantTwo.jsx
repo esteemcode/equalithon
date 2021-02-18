@@ -1,6 +1,5 @@
 import { React } from 'react';
 import Navigation from './landingPage/navigation/Navigation';
-import { Link } from 'react-router-dom'
 import { Row, Col, Form, Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,7 +22,7 @@ const DenyApplicantTwo = () => {
                                 </input>
                             </div>
                             <div className="col-6">
-                                <input type="text" className="form-control mb-2" placeholder="Her Slack">
+                                <input type="text" className="form-control mb-2" placeholder="Applicant Slack">
                                 </input>
                             </div>
                         </div>
