@@ -31,6 +31,27 @@ const Home = () => {
                         </Button>{' '}
                     </Col>
                 </Row>
+                <Row className="text-center mb-1">
+                    <Col lg={{ span: 6, offset: 3 }}>
+                        <Button href="/slack" className="home-button light-gray font-light-gray" variant="light" size="lg">
+                            Download your resume
+                        </Button>{' '}
+                    </Col>
+                </Row>
+                <Row className="text-center mb-1">
+                    <Col lg={{ span: 6, offset: 3 }}>
+                        <Button href="/slack" className="home-button light-gray font-light-gray" variant="light" size="lg">
+                            Endorse other participants
+                        </Button>{' '}
+                    </Col>
+                </Row>
+                <Row className="text-center mb-1">
+                    <Col lg={{ span: 6, offset: 3 }}>
+                        <Button href="/slack" className="home-button light-gray font-light-gray" variant="light" size="lg">
+                            Share news about Equalithons
+                        </Button>{' '}
+                    </Col>
+                </Row>
             </Container>
         </>
 

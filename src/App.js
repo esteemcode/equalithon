@@ -26,6 +26,7 @@ import TeamArea from './components/TeamArea';
 import YourEqualithons from './components/YourEqualithons';
 import TeamStatus from './components/TeamStatus';
 import ValidateApplicant from './components/ValidateApplicant';
+import DenyApplicantTwo from './components/DenyApplicant';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         <Route path="/YourEqualithons" exact component={YourEqualithons}/>
         <Route path="/TeamStatus" exact component={TeamStatus}/>
         <Route path="/ValidateApplicant" exact component={ValidateApplicant}/>
+        <Route path="/denyapplicant" exact component={DenyApplicantTwo}/>
       </Router>
     </div>
   );
