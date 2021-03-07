@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navigation from './landingPage/navigation/Navigation';
+import NavigationSignUp from './landingPage/navigation/NavigationSignUp';
 import {Row, Col, Form, Button, Container} from 'react-bootstrap';
 import {Redirect} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -54,9 +54,9 @@ const SignIn = props => {
 
     return (
         <>
-            <Navigation />
+            <NavigationSignUp />
             <Form className="registrationForm" onSubmit={onSubmitHandler}>
-                <h5 className="cyan form-header text-white p-3 mb-3">Sign up</h5>
+                <h5 className="cyan form-header text-white p-3 mb-3">Sign In</h5>
                 <Form.Group className="form-group">
                     <Form.Control required type="email" placeholder="E-mail" name="pemail" onChange={onChangeHandler} />
                 </Form.Group>
