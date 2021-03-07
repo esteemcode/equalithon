@@ -60,13 +60,15 @@ const CreateTeam = () => {
                     <Row>
                     <Col md={8}></Col>
                     <Col md={4}>
+                    <br></br>
                 <Row className="float-right">
-                <Button href="" size="sm
-                " variant="light" className="text-dark mb-2 light-gray">Select Skills</Button>
+                <Button href="" size="sm" variant="light" className="text-dark mb-2 light-gray">Select Skills</Button>
                 </Row>
+                <br></br>
 
                 <Row className="float-right">
-                <Button href="/teamArea" size="md" variant="warning" className="yellow text-dark mb-2">Create team</Button>
+
+                <Button href="/teamArea" size="lg" variant="warning" className="yellow text-dark mb-2">Create team</Button>
                 </Row>
                 </Col>
                 </Row>

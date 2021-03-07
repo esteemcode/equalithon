@@ -62,10 +62,8 @@ class EqualithonSelection extends Component {
                     <Form.Control as="textarea" name="restofagenda" rows={3} placeholder={each.restofagenda} readOnly />
                 </Form.Group>
                 <Row className="text-center mt-3">
-                    <Col lg={{ span: 6}}>
-                        <Button href="/equalithon-info" size="lg" variant="info" className="cyan text-white team-select-button mx-auto">Learn More</Button>
-                    </Col>
-                    <Col lg={{ span: 6}}>
+                   
+                    <Col lg={{ span: 6, offset: 3}}>
                         <Button href="/select-location" size="lg" variant="warning" className="yellow text-dark team-select-button mx-auto">Participate</Button>
                     </Col>
                 </Row>

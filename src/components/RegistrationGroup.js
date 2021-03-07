@@ -112,6 +112,7 @@ const RegistrationGroup = () => {
           Your contacts will receive an email with your invite; ie "Essteem does
           cool things for women in tech! Thought you'd be interested."
         </p>
+        <p>Invitee 1: </p>
 
           <div>
             <div className="row">
@@ -151,6 +152,7 @@ const RegistrationGroup = () => {
               onChange={handleInput}
             ></input>
           </div>
+          <p>Invitee 2: </p>
           <div>
             <div className="row">
               <div className="col-6">
@@ -189,6 +191,7 @@ const RegistrationGroup = () => {
               onChange={handleInput}
             ></input>
           </div>
+          <p>Invitee 3: </p>
 
           <div>
             <div className="row">
